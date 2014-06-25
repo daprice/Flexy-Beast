@@ -14,7 +14,7 @@ scaleFactor = 1.5; // [1.05:1.60]
 
 //	Scaling from 105% up to 150%
 
-translate([0,0,0.02/2]) cube(0.02, center=true);
+//translate([0,0,0.02/2]) cube(0.02, center=true); //what is this doing here?
 
 include <parts/cyborgpalm001.scad>
 include <parts/cyborgfingertip002.scad>
