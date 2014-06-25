@@ -9,6 +9,9 @@ palmW = 64;
 th = 3;
 fn = 32;
 
+//desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
+scaleFactor = 1.5; // [1.05:1.60]
+
 //	Scaling from 105% up to 150%
 
 translate([0,0,0.02/2]) cube(0.02, center=true);
@@ -19,7 +22,8 @@ include <parts/cyborgfingermid002.scad>
 
 //	translate([30,0,0]) fingertipexamples(1);
 
-handlayout();
+//handlayout();
+cyborgbeastpalm();
 
 module handlayout(sp = 14.4)
 	{
