@@ -105,10 +105,11 @@ scale([1/scaleFactor,1/scaleFactor,1/scaleFactor])
 		for (i=[-1,0,1]) translate([18*i*scaleFactor,(pow(i,2)*-12 +3)*scaleFactor,0]) 
 			cylinder(r=4/2, h=100, center=true, $fn=fn/2);
 	//	Knuckle block hinge - used to hold the stretchy joint in Flexy Beast
-		translate([0,26*scaleFactor,7*scaleFactor]) {
-			rotate([0,90,0]) cylinder(d=6.9, h=52*scaleFactor, center=true, $fn=fn/2);
-			translate([0,25,0]) cube([52*scaleFactor,50,4], center=true);
-		}
+		for(i=[-3,-1,1,3]) translate([i*7.3*scaleFactor,0,0])
+			translate([0,26*scaleFactor,7*scaleFactor]) {
+				rotate([0,90,0]) cylinder(d=6.9, h=8*scaleFactor, center=true, $fn=fn/2);
+				translate([0,25,0]) cube([8*scaleFactor,50,4], center=true);
+			}
 	//	Wrist hinges
 		translate([0,-27*scaleFactor,5.5*scaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
 	//	Holes for tying the elastic cord at knuckles - not needed in Flexy Beast
