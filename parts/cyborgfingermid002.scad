@@ -1,5 +1,7 @@
 //	Middle segment of finger, can be scaled and lengthened
 module fingermid(s=1, len=0, rad=5)
+{
+	scale([scaleFactor,scaleFactor,scaleFactor])
 	{
 	difference()
 		{
@@ -66,3 +68,4 @@ module fingermidsolid(len=0, rad=5)
 			}
 		}
 	}
+}
