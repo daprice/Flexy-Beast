@@ -7,10 +7,12 @@ module fingermid(s=1, len=0, rad=5)
 		{
 		scale([s,s,s]) fingermidsolid(len=len, rad=rad);
 		//	Hole for screw
-		for (i=[-1,1]) translate([0,(-11.5-len/3)*s*i,5*s]) rotate([0,90,0]) 
+		for (i=[-1,1]) translate([0,(-11.5-len/3)*s*i,7*s]) rotate([0,90,0]) {
 			cylinder(r=4/2, h=20, center=true, $fn=fn/2); 
+			translate([0,-25*i,0]) rotate([0,90,0]) cube([10,50,4*(1/scaleFactor)], center=true);
+		}
 		//	Channel for elastic and tension cable
-		for (i=[-1,1]) translate([0,0,5+ 6.5/2*i]) rotate([90,0,0]) 
+		translate([0,0,5+ 6.5/2*-1]) rotate([90,0,0]) 
 			cylinder(r=2/2, h=40+len, $fn=fn/2, center=true);
 		//	Channels for tension cables to constrict
 		for(i=[0,1]) mirror([0,i,0]) hull() for (i=[0,1]) translate([0,-6-len/3,1.75-6.5/2 *i]) rotate([90,0,0]) 
