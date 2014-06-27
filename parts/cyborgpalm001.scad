@@ -1,10 +1,10 @@
 module cyborgbeastpalm()
-{
-scale([xScaleFactor,yScaleFactor,zScaleFactor])
 	{
 	difference()
 		{
-		difference()
+		scale([xScaleFactor,yScaleFactor,zScaleFactor])
+		{
+			difference()
 			{
 			cyborgbeast07palm();
 			cyborgbeast07palminsidespace();
@@ -38,10 +38,10 @@ scale([xScaleFactor,yScaleFactor,zScaleFactor])
 			//	Making sure the bottom is flat
 			translate([0,0,-100/2]) cube(100, center=true);
 			}
+		}
 		hardwarecutouts();
 		}
 	}	
-}
 	
 module cyborgthumbsolid()
 	{
@@ -105,8 +105,6 @@ module cyborgbeast07palminsidespace()
 
 
 module hardwarecutouts()
-{
-scale([1/xScaleFactor,1/yScaleFactor,1/zScaleFactor])
 	{
 	//	Three holes for putting in velcro straps
 		for (i=[-1,0,1]) translate([18*i*xScaleFactor,(pow(i,2)*-12 +3)*yScaleFactor,0]) 
@@ -155,7 +153,6 @@ scale([1/xScaleFactor,1/yScaleFactor,1/zScaleFactor])
 				cylinder(r1=1, r2=20, h=100, center=false, $fn=fn/2);
 		
 	}
-}
 
 module knuckleblock(width=4.8)
 	{
