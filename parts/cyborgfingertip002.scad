@@ -14,6 +14,8 @@ module fingertipexamples(set=0)
 
 //	Finger tip, can be scaled, lengthened, and grips added
 module fingertip(s=1, len=0, grip=1)
+{
+	scale([scaleFactor,scaleFactor,scaleFactor])
 	{
 	difference()
 		{
@@ -37,6 +39,7 @@ module fingertip(s=1, len=0, grip=1)
 			}
 		}
 	}
+}
 
 //	Finger tip solid
 module fingertipsolid(len=0, grip=1, rad=5)
