@@ -10,7 +10,9 @@ th = 3;
 fn = 32;
 
 //desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
-scaleFactor = 1.5; // [1.05:1.60]
+xScaleFactor = 1.5; // [1.05:1.60]
+yScaleFactor = 1.5; // [1.05:1.60]
+zScaleFactor = 1.5; // [1.05:1.60]
 
 //	Scaling from 105% up to 150%
 
@@ -28,17 +30,17 @@ handlayout();
 module handlayout(sp = 14.4)
 	{
 	cyborgbeastpalm();
-	translate([22*scaleFactor,39*scaleFactor,7*scaleFactor]) rotate([0,180,0]) 
+	translate([22*xScaleFactor,39*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
-		translate([0*scaleFactor,10*scaleFactor,0]) render() fingerlayout(length=0);		//	Index finger
-		translate([sp*scaleFactor,12.5*scaleFactor,0]) render() fingerlayout(length=7);	//	Middle finger
-		translate([sp*2*scaleFactor,12*scaleFactor,0]) render() fingerlayout(length=5);	//	Ring finger
-		translate([sp*3*scaleFactor,7.5*scaleFactor,0]) render() fingerlayout(length=-7.5);	//	Little finger
+		translate([0*xScaleFactor,10*yScaleFactor,0]) render() fingerlayout(length=0);		//	Index finger
+		translate([sp*xScaleFactor,12.5*yScaleFactor,0]) render() fingerlayout(length=7);	//	Middle finger
+		translate([sp*2*xScaleFactor,12*yScaleFactor,0]) render() fingerlayout(length=5);	//	Ring finger
+		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=-7.5);	//	Little finger
 		}
-	translate([41*scaleFactor,-9.5*scaleFactor,-4*scaleFactor]) rotate([50,-20,90]) 
+	translate([41*xScaleFactor,-9.5*yScaleFactor,-4*zScaleFactor]) rotate([50,-20,90]) 
 		{
 		thumbmid();	//	Thumb mid
-		translate([0,-18*scaleFactor,5*scaleFactor]) rotate([30,180,180]) thumbtip();	//	Thumb tip
+		translate([0,-18*yScaleFactor,5*zScaleFactor]) rotate([30,180,180]) thumbtip();	//	Thumb tip
 		}
 	}
 

@@ -1,6 +1,6 @@
 module cyborgbeastpalm()
 {
-scale([scaleFactor,scaleFactor,scaleFactor])
+scale([xScaleFactor,yScaleFactor,zScaleFactor])
 	{
 	difference()
 		{
@@ -30,7 +30,7 @@ scale([scaleFactor,scaleFactor,scaleFactor])
 			//	Thumb connector
 			translate([40,-13,6.5]) {
 				//channel for string to thumb
-				translate([0,1.5,-5]) rotate([0,90,10]) translate([0,0,-5.5]) cylinder(r=1.25*(1/scaleFactor), h=5, $fn=fn/2);
+				translate([0,1.5,-5]) rotate([0,90,10]) translate([0,0,-5.5]) cylinder(r=1.25*(1/yScaleFactor), h=5, $fn=fn/2);
 				//thumb cutout
 				rotate([-72,20,0]) 
 					translate([11,4.1,0]) cube([21.6,15,10], center=true);
@@ -106,52 +106,52 @@ module cyborgbeast07palminsidespace()
 
 module hardwarecutouts()
 {
-scale([1/scaleFactor,1/scaleFactor,1/scaleFactor])
+scale([1/xScaleFactor,1/yScaleFactor,1/zScaleFactor])
 	{
 	//	Three holes for putting in velcro straps
-		for (i=[-1,0,1]) translate([18*i*scaleFactor,(pow(i,2)*-12 +3)*scaleFactor,0]) 
+		for (i=[-1,0,1]) translate([18*i*xScaleFactor,(pow(i,2)*-12 +3)*yScaleFactor,0]) 
 			cylinder(r=4/2, h=100, center=true, $fn=fn/2);
 	//	Knuckle block hinge - used to hold the stretchy joint in Flexy Beast
-		for(i=[-3,-1,1,3]) translate([i*7*scaleFactor,0,0])
-			translate([0,26*scaleFactor,7*scaleFactor]) {
-				rotate([0,90,0]) cylinder(d=6.9, h=10*scaleFactor, center=true, $fn=fn/2);
-				translate([0,25,0]) cube([10*scaleFactor,50,4], center=true);
+		for(i=[-3,-1,1,3]) translate([i*7*xScaleFactor,0,0])
+			translate([0,26*yScaleFactor,7*zScaleFactor]) {
+				rotate([0,90,0]) cylinder(d=6.9, h=10*xScaleFactor, center=true, $fn=fn/2);
+				translate([0,25,0]) cube([10*xScaleFactor,50,4], center=true);
 			}
 	//	Wrist hinges
-		translate([0,-27*scaleFactor,5.5*scaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
+		translate([0,-27*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
 	//	Holes for tying the elastic cord at knuckles - not needed in Flexy Beast
 	//	for (i=[-1,1]) translate([7.3*2*i,22,0]) for(i=[-1,1]) translate([2*i,0,0])
 	//		cylinder(r=1.25, h=100, center=true, $fn=fn/4);
 	//	Holes for the tendons on wrist
-		translate([0,-10*scaleFactor,(palmW/2-5)*scaleFactor]) rotate([-4,0,0]) 
+		translate([0,-10*yScaleFactor,(palmW/2-5)*zScaleFactor]) rotate([-4,0,0]) 
 			{
-		*	for(i=[-4,-2,0,2,4]) translate([i*2*scaleFactor,0,(pow(i,2)*-0.05)*scaleFactor  ]) rotate([90,0,i*-2]) 
+		*	for(i=[-4,-2,0,2,4]) translate([i*2*xScaleFactor,0,(pow(i,2)*-0.05)*zScaleFactor  ]) rotate([90,0,i*-2]) 
 				cylinder(r=1, h=100, center=true, $fn=fn/4);
-			for(i=[-3,-1,1,3]) translate([i*2*scaleFactor,0,(pow(i,2)*-0.05)*scaleFactor  ]) rotate([90,0,i*-2]) 
+			for(i=[-3,-1,1,3]) translate([i*2*xScaleFactor,0,(pow(i,2)*-0.05)*zScaleFactor  ]) rotate([90,0,i*-2]) 
 				cylinder(r=1, h=100, center=true, $fn=fn/4);
-			translate([5*2*scaleFactor,0,(pow(5,2)*-0.05)*scaleFactor  ]) rotate([90,0,5*-2]) 
-				union() translate([0,0,10*scaleFactor]) {
+			translate([5*2*xScaleFactor,0,(pow(5,2)*-0.05)*zScaleFactor  ]) rotate([90,0,5*-2]) 
+				union() translate([0,0,10*zScaleFactor]) {
 				cylinder(r=1, h=100, center=false, $fn=fn/4);
 				rotate([0,120,-15]) cylinder(r=1, h=100, center=false, $fn=fn/4);
 				sphere(1.25);
 				}
 			}
 	//	Holes for thumb knuckle - used to hold the stretchy joint in Flexy Beast
-		translate([40*scaleFactor,-13*scaleFactor,5*scaleFactor]) {
-			rotate([-72,20,0]) translate([-4,-1.5*scaleFactor,0.7]) {
-				cylinder(d=6.9, h=10*scaleFactor, center=true, $fn=fn/2);
-				translate([25,0,0]) cube([50,4,10*scaleFactor], center=true);
+		translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
+			rotate([-72,20,0]) translate([-4,-1.5*yScaleFactor,0.7]) {
+				cylinder(d=6.9, h=10*yScaleFactor, center=true, $fn=fn/2);
+				translate([25,0,0]) cube([50,4,10*yScaleFactor], center=true);
 			}
 		}
 	//	Elastic return cutout - not needed in Flexy Beast
 	//	translate([31,-13,16]) rotate([-72,0,0]) cylinder(r=3/2, h=40, center=true, $fn=fn/2);
 	//	Thumb tendon channel
-		translate([33*scaleFactor,-13*scaleFactor,5*scaleFactor]) rotate([90-72,-90,-30]) 
-			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,-4.5*scaleFactor]) 
+		translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
+			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,-4.5*xScaleFactor]) 
 				cylinder(r=1, h=100, center=false, $fn=fn/2);
 	//	Thumb tendon channel
-		translate([33*scaleFactor,-13*scaleFactor,5*scaleFactor]) rotate([90-72,-90,-30]) 
-			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,5*scaleFactor]) 
+		translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
+			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,5*zScaleFactor]) 
 				cylinder(r1=1, r2=20, h=100, center=false, $fn=fn/2);
 		
 	}
