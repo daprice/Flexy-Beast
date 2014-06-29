@@ -19,8 +19,9 @@ zScaleFactor = 1.6; // [1.05:1.60]
 //translate([0,0,0.02/2]) cube(0.02, center=true); //what is this doing here?
 
 include <parts/cyborgpalm001.scad>
-include <parts/cyborgfingertip002.scad>
-include <parts/cyborgfingermid002.scad>
+include <parts/flexyfinger_base.scad>
+include <parts/flexyfinger_mid.scad>
+include <parts/flexyfinger_tip.scad>
 
 //	translate([30,0,0]) fingertipexamples(1);
 
@@ -44,10 +45,11 @@ module handlayout(sp = 14.4)
 		}
 	}
 
-module fingerlayout(size=1, length=0)
+module fingerlayout(length=0)
 	{
-*	translate([0,23+length*2/3,1.5]) rotate([10,0,0]) fingertip(s=size, grip=1, len=length);
-	mirror([0,0,1]) mirror([0,1,0]) translate([0,0,-10]) fingermid(s=size, len=length);
+	translate([0,40+length*2/3,1.5]) rotate([10,0,0]) fingertip(len=length);
+	translate([0,23+length*2/3,1.5]) fingermid(len=length);
+	mirror([0,0,1]) mirror([0,1,0]) translate([0,0,-10]) fingerbase(len=length);
 	}
 
 *	translate([30,0,0]) fingermid(len=10);
@@ -55,11 +57,11 @@ module fingerlayout(size=1, length=0)
 *	translate([70,0,0]) fingermid(len=30);
 
 module thumbmid()
-	{ fingermid(len=-12); }
+	{ fingerbase(len=-12); }
 
 module thumbtip()
 	{
 	//	difference() {
-	fingertip(len=-5, grip=1);
+	fingertip(len=-5);
 	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
 	}
