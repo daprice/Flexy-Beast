@@ -3,6 +3,7 @@
 //	- Optimize for scaling 105% to 150%
 
 knuckleR = 4.85;
+knucklePadding = 0.75;
 knuckleW = 10;
 wristH = 10;
 palmH = 20;
