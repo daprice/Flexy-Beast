@@ -14,8 +14,8 @@ module cyborgbeastpalm()
 				{
 				//cutouts for finger knuckles
 				translate([0,5,0]) {
-					cube([10,10,21.6], center=true);
-					rotate([-45,0,0]) cube([10,13.3,21.6], center=true);
+					cube([knuckleW,10,21.6], center=true);
+					rotate([-45,0,0]) cube([knuckleW,13.3,21.6], center=true);
 				}
 				//channels for strings through knuckles
 				translate([0,0.1,0.5]) rotate([90,0,0]) cylinder(r=1.25, h=5, $fn=fn/2);
@@ -37,8 +37,8 @@ module cyborgbeastpalm()
 				//thumb cutout
 				rotate([-72,20,0]) 
 					translate([11,4.1,0]) {
-						cube([21.6,15,10], center=true);
-						rotate([0,0,-55]) cube([50,19.5,10], center=true);
+						cube([21.6,15,knuckleW], center=true);
+						rotate([0,0,-55]) cube([50,19.5,knuckleW], center=true);
 					}
 			}
 			//	Making sure the bottom is flat
@@ -118,8 +118,8 @@ module hardwarecutouts()
 	//	Knuckle block hinge - used to hold the stretchy joint in Flexy Beast
 		for(i=[-3,-1,1,3]) translate([i*7*xScaleFactor,0,0])
 			translate([0,25*yScaleFactor,6*zScaleFactor]) {
-				rotate([0,90,0]) cylinder(d=7.5, h=10*xScaleFactor, center=true, $fn=fn/2);
-				translate([0,25,0]) cube([10*xScaleFactor,50,4], center=true);
+				rotate([0,90,0]) cylinder(d=7.5, h=knuckleW*xScaleFactor, center=true, $fn=fn/2);
+				translate([0,25,0]) cube([knuckleW*xScaleFactor,50,4], center=true);
 			}
 	//	Wrist hinges
 		translate([0,-27*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
@@ -143,8 +143,8 @@ module hardwarecutouts()
 	//	Holes for thumb knuckle - used to hold the stretchy joint in Flexy Beast
 		translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
 			rotate([-72,20,0]) translate([-5,-0.5*yScaleFactor,0.7]) {
-				cylinder(d=7.5, h=10*yScaleFactor, center=true, $fn=fn/2);
-				translate([25,0,0]) cube([50,4,10*yScaleFactor], center=true);
+				cylinder(d=7.5, h=knuckleW*yScaleFactor, center=true, $fn=fn/2);
+				translate([25,0,0]) cube([50,4,knuckleW*yScaleFactor], center=true);
 			}
 		}
 	//	Elastic return cutout - not needed in Flexy Beast
@@ -176,7 +176,7 @@ module cyborgbeast07palm()
 	//	Thumb!!!
 	translate([40,-13,5]) rotate([-72,0,0]) cyborgthumbsolid();
 	//	Knuckle Block
-	for(i=[-3,-1,1,3]) translate([i*7,23.9,4+4]) knuckleblock(size=4.8);
+	for(i=[-3,-1,1,3]) translate([i*7,23.9,4+4]) knuckleblock(width=knuckleW/2);
 
 	//	Palm
 	hull() 
