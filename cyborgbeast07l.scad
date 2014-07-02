@@ -33,7 +33,7 @@ handlayout();
 module handlayout(sp = 14)
 	{
 	cyborgbeastpalm();
-	translate([21*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
+	translate([20.5*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
 		translate([0*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=0);		//	Index finger
 		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=7);	//	Middle finger
@@ -43,27 +43,24 @@ module handlayout(sp = 14)
 	translate([36*xScaleFactor,-15.5*yScaleFactor,0.5*zScaleFactor]) rotate([50,-20,90]) 
 		{
 		thumbmid();	//	Thumb mid
-		translate([0,-18*yScaleFactor,5*zScaleFactor]) rotate([30,180,180]) thumbtip();	//	Thumb tip
+		translate([0,-25*yScaleFactor,0*zScaleFactor]) rotate([0,0,-90]) thumbtip();	//	Thumb tip
 		}
 	}
 
 module fingerlayout(length=0)
 	{
-*	translate([0,40+length*2/3,1.5]) rotate([10,0,0]) fingertip(len=length);
-	rotate([180,0,90]) translate([20,-8,-10]) fingermid(len=length);
-	rotate([180,0,90]) translate([-20,-8,-10]) fingerbase(len=length);
+	rotate([180,-15,90]) translate([50,-8,-4]) fingertip();
+	rotate([180,-10,90]) translate([20,-8,-9]) fingermid();
+	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase();
 	}
 
-*	translate([30,0,0]) fingermid(len=10);
-*	translate([50,0,0]) fingermid(len=0);
-*	translate([70,0,0]) fingermid(len=30);
 
 module thumbmid()
-	{ rotate([0,0,-90]) fingerbase(len=-12); }
+	{ rotate([0,0,-90]) fingerbase(); }
 
 module thumbtip()
 	{
 	//	difference() {
-	fingertip(len=-5);
+	fingertip(length=20);
 	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
 	}
