@@ -27,20 +27,20 @@ include <parts/flexyfinger_tip.scad>
 
 //	translate([30,0,0]) fingertipexamples(1);
 
-//handlayout();
-cyborgbeastpalm();
+handlayout();
+//cyborgbeastpalm();
 
-module handlayout(sp = 14.4)
+module handlayout(sp = 14)
 	{
 	cyborgbeastpalm();
-	translate([22*xScaleFactor,39*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
+	translate([21*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
-		translate([0*xScaleFactor,10*yScaleFactor,0]) render() fingerlayout(length=0);		//	Index finger
-		translate([sp*xScaleFactor,12.5*yScaleFactor,0]) render() fingerlayout(length=7);	//	Middle finger
-		translate([sp*2*xScaleFactor,12*yScaleFactor,0]) render() fingerlayout(length=5);	//	Ring finger
+		translate([0*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=0);		//	Index finger
+		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=7);	//	Middle finger
+		translate([sp*2*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=5);	//	Ring finger
 		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=-7.5);	//	Little finger
 		}
-	translate([41*xScaleFactor,-9.5*yScaleFactor,-4*zScaleFactor]) rotate([50,-20,90]) 
+	translate([36*xScaleFactor,-15.5*yScaleFactor,0.5*zScaleFactor]) rotate([50,-20,90]) 
 		{
 		thumbmid();	//	Thumb mid
 		translate([0,-18*yScaleFactor,5*zScaleFactor]) rotate([30,180,180]) thumbtip();	//	Thumb tip
@@ -51,7 +51,7 @@ module fingerlayout(length=0)
 	{
 *	translate([0,40+length*2/3,1.5]) rotate([10,0,0]) fingertip(len=length);
 *	translate([0,23+length*2/3,1.5]) fingermid(len=length);
-*	mirror([0,0,1]) mirror([0,1,0]) translate([0,0,-10]) fingerbase(len=length);
+	rotate([180,0,90]) translate([-20,-8,-10]) fingerbase(len=length);
 	}
 
 *	translate([30,0,0]) fingermid(len=10);
@@ -59,7 +59,7 @@ module fingerlayout(length=0)
 *	translate([70,0,0]) fingermid(len=30);
 
 module thumbmid()
-	{ fingerbase(len=-12); }
+	{ rotate([0,0,-90]) fingerbase(len=-12); }
 
 module thumbtip()
 	{
