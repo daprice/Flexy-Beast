@@ -7,15 +7,15 @@ module fingerbase(length=26)
 		scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
 			fingerbasesolid(length);
 		}
-		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia=7.5, jointThick=4, knuckleW=knuckleW-knucklePadding);
-		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia=5, jointThick=2.2, knuckleW=knuckleW);
+		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia=7.5, jointThick=4, knuckleW=knuckleW-knucklePadding, fingerLen=length);
+		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia=5, jointThick=2.2, knuckleW=knuckleW, fingerLen=length);
 	}
 
 
 	
 }
 
-module fingerhardwarecutouts(jointDia,jointThick,knuckleW) {
+module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen) {
 	//slot for flex joint
 	translate([6.3 - (15/jointDia),0,6*zScaleFactor - (1.8/jointThick)]) {
 		rotate([90,0,0]) translate([0,0,-knuckleW*yScaleFactor]) cylinder(d=jointDia, h=knuckleW*yScaleFactor, $fn=50);
@@ -24,6 +24,9 @@ module fingerhardwarecutouts(jointDia,jointThick,knuckleW) {
 	//cubic parts
 	translate([-100,0,0]) cube([100,knuckleW*yScaleFactor,100]);
 	translate([-5.5*xScaleFactor,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,knuckleW * yScaleFactor, 10]);
+
+	//channel for string/tendon
+	translate([fingerLen/2 * xScaleFactor, knuckleW/2 * yScaleFactor, 2]) rotate([0,90,0]) cylinder(d=2, h=100, $fn=50);
 }
 
 //	base segment of finger, solid
