@@ -1,14 +1,13 @@
+include <flexyfinger_base.scad>
+
 //	Middle segment of finger, can be lengthened
-module fingermid(len=0, rad=5)
+module fingermid(length=20)
 {
 	difference() {
 		scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
-			fingermidsolid(len=len, rad=rad);
+			fingerbasesolid(length);
 		}
+		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia=5, jointThick=2.2, knuckleW=knuckleW-knucklePadding);
+		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia=5, jointThick=2.2, knuckleW=knuckleW);
 	}
-}
-
-//	Middle segment of finger, solid
-module fingermidsolid(len=0, rad=5) {
-	
 }

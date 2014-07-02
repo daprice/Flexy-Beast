@@ -4,7 +4,7 @@
 
 knuckleR = 4.85;
 knucklePadding = 1;
-knuckleW = 9.5;
+knuckleW = 9;
 wristH = 10;
 palmH = 20;
 palmW = 64;
@@ -35,10 +35,10 @@ module handlayout(sp = 14)
 	cyborgbeastpalm();
 	translate([21*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
-		translate([0*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=0);		//	Index finger
-		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=7);	//	Middle finger
-		translate([sp*2*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=5);	//	Ring finger
-		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) render() fingerlayout(length=-7.5);	//	Little finger
+		translate([0*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=0);		//	Index finger
+		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=7);	//	Middle finger
+		translate([sp*2*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=5);	//	Ring finger
+		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=-7.5);	//	Little finger
 		}
 	translate([36*xScaleFactor,-15.5*yScaleFactor,0.5*zScaleFactor]) rotate([50,-20,90]) 
 		{
@@ -50,7 +50,7 @@ module handlayout(sp = 14)
 module fingerlayout(length=0)
 	{
 *	translate([0,40+length*2/3,1.5]) rotate([10,0,0]) fingertip(len=length);
-*	translate([0,23+length*2/3,1.5]) fingermid(len=length);
+	rotate([180,0,90]) translate([20,-8,-10]) fingermid(len=length);
 	rotate([180,0,90]) translate([-20,-8,-10]) fingerbase(len=length);
 	}
 
