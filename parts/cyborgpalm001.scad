@@ -14,8 +14,8 @@ module cyborgbeastpalm()
 				{
 				//cutouts for finger knuckles
 				translate([0,4.5,0]) {
-					cube([knuckleW + knucklePadding,10,21.6], center=true);
-					rotate([-45,0,0]) cube([knuckleW+knucklePadding,14,21.6], center=true);
+					cube([knuckleW + knucklePadding*(1/xScaleFactor),10,21.6], center=true);
+					rotate([-45,0,0]) cube([knuckleW+knucklePadding*(1/xScaleFactor),14,21.6], center=true);
 				}
 				//channels for strings through knuckles
 				translate([0,0.1,0.5]) rotate([90,0,0]) cylinder(r=1.25, h=5, $fn=fn/2);
@@ -37,8 +37,8 @@ module cyborgbeastpalm()
 				//thumb cutout
 				rotate([-72,20,0]) 
 					translate([11,4.1,0]) {
-						cube([21.6,15,knuckleW], center=true);
-						rotate([0,0,-50]) cube([50,19.5,knuckleW], center=true);
+						cube([21.6,15,knuckleW + knucklePadding*(1/yScaleFactor)], center=true);
+						rotate([0,0,-50]) cube([50,19.5,knuckleW + knucklePadding*(1/yScaleFactor)], center=true);
 					}
 			}
 			//	Making sure the bottom is flat
