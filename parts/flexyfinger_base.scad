@@ -26,7 +26,7 @@ module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen) {
 	translate([-5.5*xScaleFactor,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,knuckleW * yScaleFactor, 10]);
 
 	//channel for string/tendon
-	translate([fingerLen/2 * xScaleFactor, knuckleW/2 * yScaleFactor, 2]) rotate([0,90,0]) cylinder(d=2.5, h=100, $fn=50);
+	translate([-fingerLen/2 * xScaleFactor, knuckleW/2 * yScaleFactor, 2]) rotate([0,90,0]) cylinder(d=2.5, h=100, $fn=50);
 }
 
 //	base segment of finger, solid
