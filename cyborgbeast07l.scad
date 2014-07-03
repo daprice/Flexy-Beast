@@ -3,8 +3,8 @@
 //	- Optimize for scaling 105% to 150%
 
 knuckleR = 4.85;
-knucklePadding = 1;
-knuckleW = 9;
+knucklePadding = 0.5;
+knuckleW = 9.5;
 wristH = 10;
 palmH = 20;
 palmW = 64;
@@ -43,14 +43,14 @@ module handlayout(sp = 14)
 	translate([36*xScaleFactor,-15.5*yScaleFactor,0.5*zScaleFactor]) rotate([50,-20,90]) 
 		{
 		thumbmid();	//	Thumb mid
-		translate([0,-25*yScaleFactor,0*zScaleFactor]) rotate([0,0,-90]) thumbtip();	//	Thumb tip
+		translate([0,-22*yScaleFactor,0*zScaleFactor]) rotate([0,0,-90]) thumbtip();	//	Thumb tip
 		}
 	}
 
 module fingerlayout(length=0)
 	{
-	rotate([180,-15,90]) translate([50,-8,-4]) fingertip();
-	rotate([180,-10,90]) translate([20,-8,-9]) fingermid();
+	rotate([180,-15,90]) translate([44,-8,-5]) fingertip();
+	rotate([180,-10,90]) translate([15,-8,-10]) fingermid();
 	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase();
 	}
 
