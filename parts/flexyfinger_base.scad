@@ -7,8 +7,8 @@ module fingerbase(length=23)
 		scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
 			fingerbasesolid(length);
 		}
-		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia=7.5, jointThick=4, knuckleW=knuckleW-knucklePadding, fingerLen=length);
-		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia=7.5, jointThick=4, knuckleW=knuckleW, fingerLen=length);
+		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length);
+		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW, fingerLen=length);
 	}
 
 
@@ -18,7 +18,7 @@ module fingerbase(length=23)
 module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen) {
 	//slot for flex joint
 	translate([7 - (15/jointDia),0,6*zScaleFactor - (1.8/jointThick)]) {
-		rotate([90,0,0]) translate([0,0,-knuckleW*yScaleFactor]) cylinder(d=jointDia, h=knuckleW*yScaleFactor, $fn=50);
+		rotate([90,0,0]) translate([-0.25,0,-knuckleW*yScaleFactor]) cylinder(d=jointDia, h=knuckleW*yScaleFactor, $fn=50);
 		translate([-25,(knuckleW*yScaleFactor) / 2,0]) cube([50,knuckleW*yScaleFactor,jointThick], center=true);
 	}
 	//cubic parts

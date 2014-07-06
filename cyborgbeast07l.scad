@@ -11,6 +11,10 @@ palmW = 64;
 th = 3;
 fn = 32;
 
+//flexy joint parameters
+jointDia = 7;
+jointThick = 4;
+
 //desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
 xScaleFactor = 1.5; // [1.05:1.60]
 yScaleFactor = 1.6; // [1.05:1.60]

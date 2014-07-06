@@ -14,8 +14,8 @@ module cyborgbeastpalm()
 				{
 				//cutouts for finger knuckles
 				translate([0,4.5,0]) {
-					cube([knuckleW + knucklePadding*(1/xScaleFactor),10,21.6], center=true);
-					rotate([-45,0,0]) cube([knuckleW+knucklePadding*(1/xScaleFactor),14,21.6], center=true);
+					cube([knuckleW + knucklePadding,10,21.6], center=true);
+					rotate([-45,0,0]) cube([knuckleW+knucklePadding,14,21.6], center=true);
 				}
 				//channels for strings through knuckles
 				translate([0,0.1,0.5]) rotate([90,0,0]) cylinder(r=1.25, h=5, $fn=fn/2);
@@ -37,8 +37,8 @@ module cyborgbeastpalm()
 				//thumb cutout
 				rotate([-72,20,0]) 
 					translate([11,4.1,0]) {
-						cube([21.6,15,knuckleW + knucklePadding*(1/yScaleFactor)], center=true);
-						rotate([0,0,-50]) cube([50,19.5,knuckleW + knucklePadding*(1/yScaleFactor)], center=true);
+						cube([21.6,15,knuckleW + knucklePadding], center=true);
+						rotate([0,0,-50]) cube([50,19.5,knuckleW + knucklePadding], center=true);
 					}
 			}
 			//	Making sure the bottom is flat
@@ -117,9 +117,9 @@ module hardwarecutouts()
 			cylinder(r=4/2, h=100, center=true, $fn=fn/2);
 	//	Knuckle block hinge - used to hold the stretchy joint in Flexy Beast
 		for(i=[-3,-1,1,3]) translate([i*7*xScaleFactor,0,0])
-			translate([0,24.5*yScaleFactor,6*zScaleFactor]) {
-				rotate([0,90,0]) cylinder(d=7.5, h=knuckleW*xScaleFactor + knucklePadding, center=true, $fn=fn/2);
-				translate([0,25,0]) cube([knuckleW*xScaleFactor + knucklePadding,50,4], center=true);
+			translate([0,24.75*yScaleFactor,6*zScaleFactor]) {
+				rotate([0,90,0]) cylinder(d=jointDia, h=knuckleW*xScaleFactor + knucklePadding*yScaleFactor, center=true, $fn=fn/2);
+				translate([0,25,0]) cube([knuckleW*xScaleFactor + knucklePadding*yScaleFactor,50,jointThick], center=true);
 			}
 	//	Wrist hinges
 		translate([0,-27*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=4/2, h=100, center=true, $fn=fn/2);
@@ -142,9 +142,9 @@ module hardwarecutouts()
 			}
 	//	Holes for thumb knuckle - used to hold the stretchy joint in Flexy Beast
 		translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
-			rotate([-72,20,0]) translate([-5,-0.5*yScaleFactor,0.7]) {
-				cylinder(d=7.5, h=knuckleW*yScaleFactor + knucklePadding, center=true, $fn=fn/2);
-				translate([25,0,0]) cube([50,4,knuckleW*yScaleFactor + knucklePadding], center=true);
+			rotate([-72,20,0]) translate([-4.75,-0.5*yScaleFactor,0.7]) {
+				cylinder(d=7, h=knuckleW*yScaleFactor + knucklePadding*yScaleFactor, center=true, $fn=fn/2);
+				translate([25,0,0]) cube([50,jointThick,knuckleW*yScaleFactor + knucklePadding*yScaleFactor], center=true);
 			}
 		}
 	//	Elastic return cutout - not needed in Flexy Beast
@@ -162,7 +162,7 @@ module hardwarecutouts()
 
 module knuckleblock(width=4.8)
 	{
-	difference()
+*	difference()
 		{
 		hull() for(j=[-1,1]) for(i=[-1,1]) translate([width*i,0,2.5*j]) rotate([90,0,0]) 
 			cylinder(r=1.5, h=10, center=true, $fn=fn/2);
