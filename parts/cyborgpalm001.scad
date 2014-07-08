@@ -1,4 +1,18 @@
-module cyborgbeastpalm()
+module cyborgbeastpalm() {
+	difference() {
+		cyborgbeastwholepalm();
+		scale([xScaleFactor,yScaleFactor,zScaleFactor]) knucklecutout();
+	}
+}
+
+module cyborgbeastknucklecover() {
+	intersection() {
+		cyborgbeastwholepalm();
+		scale([xScaleFactor,yScaleFactor,zScaleFactor]) knucklecutout();
+	}
+}
+
+module cyborgbeastwholepalm()
 	{
 	difference()
 		{
@@ -170,6 +184,10 @@ module knuckleblock(width=4.8)
 	*	translate([0,7.8,-2]) cube(9, center=true);
 		}
 	}
+
+module knucklecutout() {
+	translate([-50, 18.5, 6]) cube([100,100,100]);
+}
 
 module cyborgbeast07palm()
 	{

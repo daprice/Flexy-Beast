@@ -37,6 +37,7 @@ handlayout();
 module handlayout(sp = 14)
 	{
 	cyborgbeastpalm();
+	translate([0.5,0.5,10.5]) cyborgbeastknucklecover();
 	translate([20.5*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
 		translate([0*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=0);		//	Index finger
