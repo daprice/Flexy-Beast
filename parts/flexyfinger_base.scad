@@ -15,7 +15,7 @@ module fingerbase(length=23)
 	
 }
 
-module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen) {
+module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen,holeCutoff=100) {
 	//slot for flex joint
 	translate([7 - (15/jointDia),0,6*zScaleFactor - (1.8/jointThick)]) {
 		rotate([90,0,0]) translate([-0.25,0,-knuckleW*yScaleFactor]) cylinder(d=jointDia, h=knuckleW*yScaleFactor, $fn=50);
@@ -26,7 +26,7 @@ module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen) {
 	translate([-5.5*xScaleFactor,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,knuckleW * yScaleFactor, 10]);
 
 	//channel for string/tendon
-	translate([-fingerLen/2 * xScaleFactor, knuckleW/2 * yScaleFactor, 2]) rotate([0,90,0]) cylinder(d=2.5, h=100, $fn=50);
+	translate([-fingerLen/2 * xScaleFactor, knuckleW/2 * yScaleFactor, 2]) rotate([0,90,0]) cylinder(d=2.5, h=holeCutoff, $fn=50);
 }
 
 //	base segment of finger, solid
