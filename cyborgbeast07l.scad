@@ -31,6 +31,7 @@ include <parts/cyborgpalm001.scad>
 include <parts/flexyfinger_base.scad>
 include <parts/flexyfinger_mid.scad>
 include <parts/flexyfinger_tip.scad>
+include <parts/flexyfinger_tip_mold.scad>
 
 //	translate([30,0,0]) fingertipexamples(1);
 
@@ -52,6 +53,8 @@ module handlayout(sp = 14)
 		thumbmid();	//	Thumb mid
 		translate([0,-22*yScaleFactor,0*zScaleFactor]) rotate([0,0,-90]) thumbtip();	//	Thumb tip
 		}
+	translate([-100,0,0])
+		fingertip_mold();
 	}
 
 module fingerlayout(length=0)
