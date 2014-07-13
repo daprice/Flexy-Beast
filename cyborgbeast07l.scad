@@ -15,6 +15,9 @@ fn = 32;
 jointDia = 7;
 jointThick = 4;
 
+//finger pad settings
+fingerPads = true; //whether or not to hollow the finger tips slightly for molding pads
+
 //desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
 xScaleFactor = 1.5; // [1.05:1.60]
 yScaleFactor = 1.6; // [1.05:1.60]
@@ -53,7 +56,7 @@ module handlayout(sp = 14)
 
 module fingerlayout(length=0)
 	{
-	rotate([180,-15,90]) translate([44,-8,-5]) fingertip();
+	rotate([180,-15,90]) translate([44,-8,-5]) fingertip_solid(pad=fingerPads);
 	rotate([180,-10,90]) translate([15,-8,-10]) fingermid();
 	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase();
 	}
@@ -65,6 +68,6 @@ module thumbmid()
 module thumbtip()
 	{
 	//	difference() {
-	fingertip(length=20);
+	fingertip_solid(length=20);
 	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
 	}
