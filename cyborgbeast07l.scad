@@ -59,8 +59,8 @@ module handlayout(sp = 14)
 
 module fingerlayout(length=0)
 	{
-	rotate([180,-15,90]) translate([44,-8,-5]) fingertip_solid(pad=fingerPads);
-	rotate([180,-10,90]) translate([15,-8,-10]) fingermid();
+	//rotate([180,-15,90]) translate([44,-8,-5]) fingertip_solid(pad=fingerPads);
+	rotate([180,-10,90]) translate([15,-8,-10]) fingertip_curved_solid(pad=fingerPads);
 	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase();
 	}
 

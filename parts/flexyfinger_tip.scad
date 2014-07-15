@@ -1,34 +1,45 @@
 include <flexyfinger_base.scad>
+module fingertip_curved_solid(length=17, pad=true) {
+	if (!pad)
+		fingertip(length=length);
+	else {
+		difference() {
+			union() {
+				fingermid(length=length+3, proximalHole=true, distalHole=false);
+				translate([length+7,0,2.7]) rotate([0,30,0]) fingertip(length=length, proximalHole=false, cutout=false);
+			}
+			//hole for string
+			#translate([0,xScaleFactor * knuckleW/2 + knucklePadding,2]) rotate([0,90,0]) cylinder(d=2.5,h=100, $fn=50);
+			//hollow for soft pad
+			if(pad) scale([xScaleFactor,yScaleFactor,zScaleFactor]) fingertip_pad(length);
+		}
+	}
+}
+
 module fingertip_solid(length=15, pad=true) {
 	if (!pad)
 		fingertip(length=length);
 	else {
 		difference() {
 			fingertip(length=length);
-			scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
-				//cutout for molded silicone(?) piece
-				translate([0,0,-25]) cube([100,100,50], center=true);
-				translate([length+2,0,-30]) rotate([0,-45,0]) cube([100,100,50], center=true);
-				//side cutouts
-				translate([18,-knuckleW/3,-8]) rotate([90,0,0]) cylinder(d=30,h=10,center=true);
-				translate([18,knuckleW + knuckleW/3,-8]) rotate([90,0,0]) cylinder(d=30,h=10,center=true);
-				//notches to hold the silicone piece on
-				translate([length+1,-knuckleW/5 + 5 - 50,5]) rotate([0,-30,0]) cube([100,100,1], center=true);
-				translate([length+1,knuckleW + knuckleW/5 - 5 + 50,5]) rotate([0,-30,0]) cube([100,100,1], center=true);
-			}
+			if(pad) scale([xScaleFactor,yScaleFactor,zScaleFactor]) fingertip_pad(length);
 		}
 	}
 }
 
+module fingertip_pad(length) {
+
+}
+
 //	tip segment of finger, can be lengthened
-module fingertip(length=15, holes=true)
+module fingertip(length=15, proximalHole=true, cutout=true)
 {
 	intersection() {
 		difference() {
 			scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
-				fingerbasesolid(length);
+				fingerbasesolid(length,cutout);
 			}
-			if(holes) {
+			if(proximalHole) {
 				translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length, holeCutoff=(length-0.5)*2);
 				translate([(length - 5) * xScaleFactor,(knuckleW/2) * yScaleFactor,0])
 					rotate([0,30,0]) translate([0,0,2]) cylinder(d=2.5, h=100, $fn=50);

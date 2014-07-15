@@ -1,14 +1,18 @@
 //rotate([0,-90,0]) fingerbase();
 
 //	Base segment of finger, can be lengthened
-module fingerbase(length=23)
+module fingerbase(length=23, proximalHole=true, distalHole=true)
 {
 	difference() {
 		scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
 			fingerbasesolid(length);
 		}
-		translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length);
-		translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW, fingerLen=length);
+		if(proximalHole) {
+			translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length);
+		}
+		if (distalHole) {
+			translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW, fingerLen=length);
+		}
 	}
 
 
@@ -30,7 +34,7 @@ module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen,holeCutoff=1
 }
 
 //	base segment of finger, solid
-module fingerbasesolid(length=50) {
+module fingerbasesolid(length=50, cutout=true) {
 	difference() {
 		//cubic part
 		translate([0,0.001 + knucklePadding/2,1]) cube([length, knuckleW - knucklePadding - 0.002, 8]);
@@ -45,8 +49,10 @@ module fingerbasesolid(length=50) {
 				translate([0,-5,-5]) cube([length,knuckleW + 10,20]);
 			}
 			//cutout for the side "guards" of the previous knuckle
-			translate([-4,-knuckleW+0.001,5.3]) rotate([-90,0,0]) cylinder(r=11,h=10);
-			translate([-4,knuckleW - knucklePadding*(1/yScaleFactor),5.3]) rotate([-90,0,0]) cylinder(r=11,h=10);
+			if(cutout) {
+				translate([-4,-knuckleW+0.001,5.3]) rotate([-90,0,0]) cylinder(r=11,h=10);
+				translate([-4,knuckleW - knucklePadding*(1/yScaleFactor),5.3]) rotate([-90,0,0]) cylinder(r=11,h=10);
+			}
 		}
 
 		hull() {
