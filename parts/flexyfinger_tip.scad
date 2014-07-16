@@ -1,17 +1,17 @@
 include <flexyfinger_base.scad>
-module fingertip_curved_solid(length=17, pad=true) {
+module fingertip_curved_solid(length=17, pad=true, hole=true) {
 	if (!pad)
 		fingertip(length=length);
 	else {
-		difference() {
+		render() difference() {
 			union() {
 				fingermid(length=length+3, proximalHole=true, distalHole=false);
 				translate([length+7,0,2.7]) rotate([0,30,0]) fingertip(length=length, proximalHole=false, cutout=false);
 			}
 			//hole for string
-			translate([0,xScaleFactor * knuckleW/2 + knucklePadding,2]) rotate([0,90,0]) cylinder(d=2.5,h=100, $fn=50);
+			if(hole) translate([0,xScaleFactor * knuckleW/2 + knucklePadding,2]) rotate([0,90,0]) cylinder(d=2.5,h=100, $fn=50);
 			//hollow for soft pad
-			if(pad) scale([xScaleFactor,yScaleFactor,zScaleFactor]) fingertip_pad(length);
+			if(pad) translate([length+7,0,2.7]) rotate([0,30,0]) fingertip_pad(length);
 		}
 	}
 }
@@ -20,15 +20,22 @@ module fingertip_solid(length=15, pad=true) {
 	if (!pad)
 		fingertip(length=length);
 	else {
-		difference() {
+		render() difference() {
 			fingertip(length=length);
-			if(pad) scale([xScaleFactor,yScaleFactor,zScaleFactor]) fingertip_pad(length);
+			if(pad) fingertip_pad(length);
 		}
 	}
 }
 
 module fingertip_pad(length) {
-
+	difference() {
+		fingertip(length,pad=false, proximalHole=false, cutout=false);
+		translate([0,-10,-10]) cube([15,50,50]);
+		translate([0,1.5,4.5]) cube([length+5,xScaleFactor * (knuckleW + knucklePadding) - 3,8]);
+		translate([0,xScaleFactor * knuckleW/2 + knucklePadding,0]) {
+			rotate([0,60,0]) cylinder(d=8, h=100);
+		}
+	}
 }
 
 //	tip segment of finger, can be lengthened
