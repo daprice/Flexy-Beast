@@ -30,7 +30,7 @@ module fingertip_solid(length=15, pad=true) {
 module fingertip_pad(length) {
 	difference() {
 		fingertip(length,pad=false, proximalHole=false, cutout=false);
-		translate([0,-10,-10]) cube([15,50,50]);
+		translate([0,-10,-10]) cube([length-7,50,50]);
 		translate([0,1.5,4.5]) cube([length+5,xScaleFactor * (knuckleW + knucklePadding) - 3,8]);
 		translate([0,xScaleFactor * knuckleW/2 + knucklePadding,0]) {
 			rotate([0,60,0]) cylinder(d=8, h=100);
