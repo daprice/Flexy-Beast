@@ -13,14 +13,7 @@ Most of the sizing and assembly process follows the [standard Cyborg Beast assem
 3. Route a string through the holes in the palm and finger (these may need to be drilled out slightly) and tie it off at the fingertip.
 
 ### Finger Pads
-The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Different varieties of silicone can be used to create harder or softer pads, but Dragon Skin 10 or 20 is a good starting point. The following instructions explain how to make the finger pads.
-
-1. Print the thumb and finger tips with the `fingerPads` variable set to `true`.
-2. Print the fingertip mold.
-3. Mix silicone according to the instructions from the supplier. The process should be similar to [that for casting joints](https://github.com/daprice/Flexy-Joint/wiki/Casting). Pour the liquid silicone to mostly fill the fingertip mold.
-4. Insert the printed fingertip piece into the filled mold. If necessary, use tape to hold it in place.
-5. When the silicone is cured, remove the fingertip and silicone pad from the mold.
-6. If the pad came off the fingertip, it can be reattached by stretching it to go inside the groove in the fingertip. If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Different varieties of silicone can be used to create harder or softer pads, but Dragon Skin 10 or 20 is a good starting point. [Instructions for casting the finger pads can be found in the wiki](https://github.com/daprice/Flexy-Beast/wiki/Finger-Pad-Casting-Instructions).
 
 
 ## Future Improvements
