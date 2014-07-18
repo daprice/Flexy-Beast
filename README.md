@@ -5,15 +5,12 @@ The Flexy Beast is a wrist-powered prosthetic hand for the [e-NABLE Project](htt
 
 I recommend using [molded silicone flex joints](https://github.com/daprice/Flexy-Joint/tree/FlexyBeast) for this design. See the [Flexy Joint wiki](https://github.com/daprice/Flexy-Joint/wiki) for information about materials to use and the process of making these joints.
 
-## Assembly
-Most of the sizing and assembly process follows the [standard Cyborg Beast assembly instructions](http://enablingthefuture.org/upper-limb-prosthetics/cyborg-beast/). The following only covers the assembly of the fingers.
-
-1. Print the palm, thumb base, thumb tip, and four each of the finger base, middle, and tip. These can be scaled as needed using the `x-`, `y-`, and `zScaleFactor` variables in the OpenSCAD code.
-2. After making the 3D printed parts and flexible joints, slide a flex joint into the proximal end of each finger, then use a flat screwdriver or other thin, flat tool to insert the other end of the joint into the corresponding slot on the next inner segment.
-3. Route a string through the holes in the palm and finger (these may need to be drilled out slightly) and tie it off at the fingertip.
-
 ### Finger Pads
-The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Different varieties of silicone can be used to create harder or softer pads, but Dragon Skin 10 or 20 is a good starting point. [Instructions for casting the finger pads can be found in the wiki](https://github.com/daprice/Flexy-Beast/wiki/Finger-Pad-Casting-Instructions).
+The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. [Instructions for casting the finger pads can be found in the wiki](https://github.com/daprice/Flexy-Beast/wiki/Finger-Pad-Casting-Instructions).
+![Fingertips with the ends covered in silicone padding](fingerpads.jpg)
+
+## Hand Assembly
+Most of the sizing and assembly process follows the [standard Cyborg Beast assembly instructions](http://enablingthefuture.org/upper-limb-prosthetics/cyborg-beast/). For the parts of the assembly process which differ, see the [assembly instructions in the wiki](https://github.com/daprice/Flexy-Beast/wiki/Assembly-Instructions).
 
 
 ## Future Improvements
