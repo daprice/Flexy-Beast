@@ -1,8 +1,8 @@
 include <flexyfinger_base.scad>
 module fingertip_curved_solid(length=17, pad=true, hole=true) {
-	if (!pad)
-		fingertip(length=length);
-	else {
+//	if (!pad)
+//		fingertip(length=length);
+//	else {
 		render() difference() {
 			union() {
 				fingermid(length=length+3, proximalHole=true, distalHole=false);
@@ -13,7 +13,7 @@ module fingertip_curved_solid(length=17, pad=true, hole=true) {
 			//hollow for soft pad
 			if(pad) translate([length+7,0,2.7]) rotate([0,30,0]) fingertip_pad(length);
 		}
-	}
+//	}
 }
 
 module fingertip_solid(length=15, pad=true) {

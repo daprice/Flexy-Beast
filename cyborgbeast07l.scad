@@ -54,7 +54,7 @@ module handlayout(sp = 14)
 		translate([0,-22*yScaleFactor,0*zScaleFactor]) rotate([0,0,-90]) thumbtip();	//	Thumb tip
 		}
 	translate([-100,0,0])
-		fingertip_mold();
+		if(fingerPads) fingertip_mold();
 	}
 
 module fingerlayout(length=0)
@@ -71,6 +71,6 @@ module thumbmid()
 module thumbtip()
 	{
 	//	difference() {
-	fingertip_solid(length=20);
+	fingertip_solid(length=20, pad=fingerPads);
 	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
 	}
