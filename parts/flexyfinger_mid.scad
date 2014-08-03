@@ -4,14 +4,14 @@ include <flexyfinger_base.scad>
 module fingermid(length=19, proximalHole=true, distalHole=true)
 {
 	difference() {
-		scale([xScaleFactor,yScaleFactor,zScaleFactor]) {
+		scale([yScaleFactor,xScaleFactor,zScaleFactor]) {
 			fingerbasesolid(length);
 		}
 		if(proximalHole) {
-			translate([0,knucklePadding/2 * yScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length);
+			translate([0,knucklePadding/2 * xScaleFactor,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW-knucklePadding, fingerLen=length);
 		}
 		if(distalHole) {
-			translate([length * xScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW, fingerLen=length);
+			translate([length * yScaleFactor,0,0]) mirror([1,0,0]) fingerhardwarecutouts(jointDia, jointThick, knuckleW=knuckleW, fingerLen=length);
 		}
 	}
 }

@@ -20,7 +20,7 @@ fingerPads = true; //whether or not to hollow the finger tips slightly for moldi
 
 //desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
 xScaleFactor = 1.5; // [1.05:1.60]
-yScaleFactor = 1.6; // [1.05:1.60]
+yScaleFactor = 1.5; // [1.05:1.60]
 zScaleFactor = 1.6; // [1.05:1.60]
 
 //	Scaling from 105% up to 150%
