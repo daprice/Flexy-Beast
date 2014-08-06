@@ -3,6 +3,12 @@ include <finger_tip.scad>
 
 //fingertip_mold();
 
+/**
+ * @id finger_tip_mold
+ * @name Finger Tip Mold
+ * @category Printed
+ */
+
 module fingertip_mold(length=15) {
 	difference() {
 		scale([xScaleFactor,zScaleFactor,yScaleFactor]) {

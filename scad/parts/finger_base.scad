@@ -2,6 +2,12 @@ include <../config.scad>
 
 //rotate([0,-90,0]) fingerbase();
 
+/**
+ * @id finger_base
+ * @name Finger Base
+ * @category Printed
+ */
+
 //	Base segment of finger, can be lengthened
 module fingerbase(length=23, proximalHole=true, distalHole=true)
 {

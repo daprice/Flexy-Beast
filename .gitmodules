@@ -1,0 +1,3 @@
+[submodule "ThingDoc"]
+	path = ThingDoc
+	url = https://github.com/josefprusa/ThingDoc.git

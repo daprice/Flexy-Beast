@@ -9,6 +9,18 @@ include <parts/thumb_tip.scad>
 
 handlayout();
 
+/**
+ * Assembly of Flexy Beast hand
+ * @id assembly
+ * @name Assembly
+ * @image assembly.png
+ * @root
+ * @assembled
+ * @using 1 palm
+ * @using 4 finger_assembly
+ * @using 1 thumb_assembly
+ */
+
 module handlayout(sp = 14)
 	{
 	cyborgbeastpalm();
@@ -37,4 +49,5 @@ module fingerlayout(length=0)
 
 
 module thumbmid()
-	{ rotate([0,0,-90]) fingerbase(); }
+	{
+	rotate([0,0,-90]) fingerbase(); }

@@ -1,0 +1,250 @@
+<html>
+  <head>
+    <title>Assembly by ThingDoc</title>
+    <link rel="stylesheet" type="text/css" href="html_data/thingdoc.css" />
+   	<link rel="stylesheet" type="text/css" href="html_data/facebox.css" />
+   	<link media="only screen and (max-device-width: 800px)" href="html_data/iphone.css" type="text/css" rel="stylesheet" />
+   	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0,minimum-scale=1.0,
+        maximum-scale=1.0, user-scalable = no">
+   	<meta name="apple-mobile-web-app-capable" content="yes" />
+   	<script type="text/javascript" src="html_data/jquery.js"></script>
+   	<script type="text/javascript" src="html_data/facebox.js"></script>
+   	<script type="text/javascript" src="html_data/jquery.cookie.js"></script>
+   	<script type="text/javascript" src="html_data/thingdoc.js"></script>
+   	<script>var unique = "153431534841";
+   	</script>
+  </head>
+  <body>
+
+    <div id="menu">
+    
+    <span id="genericmenu">
+    	<a href="#" id="homebutton" class="button gray">Home</a>
+    	<a href="#" id="bombutton" class="button">BOM</a>
+    	<a href="#" id="thingsbutton" class="button white">Things</a>
+    </span>
+    <a href="#" id="assemblybutton" class="button white">Assembly</a>
+    <span id="assemblymenu">
+    	<a href="#" id="decreaseAssembly" class="button white">&lt;</a>
+    		<span id="assemblyActual">0</span>/<span id="assemblyCount">0</span>
+    	<a href="#" id="increaseAssembly" class="button white">&gt;</a>
+    </span>
+	<a href="http://thingdoc.org/"><img src="html_data/logo120.png" id="logo"/></a>
+	</div>
+
+
+    
+    <div id="main"><div id="scroller">
+
+    <div id="home">
+		<h1>Assembly</h1><img src="images/assembly.png" width="512" />
+		      <p>Assembly of Flexy Beast hand</p>
+    </div>
+
+    <div id="bom">
+		<h2>Bill of Materials</h2>
+		<p>Check all parts to get green <a href="#bom" class="button green smallbutton">BOM</a> button in menu, then proceed to the assembly.</p><p>Don't worry, the status of your BOM remains even after refreshing the page!</p>
+		
+			<h3>Flexible</h3>
+			<table id="bomtable">
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="flexy_joint">
+					</td>
+					<td class="right">
+						<strong>10 x</strong>
+					</td>
+					<td>
+						<a href="#thing_flexy_joint" rel="facebox" >Flexy Joint</a>
+					</td>
+				</tr>
+			
+			</table>
+		
+			<h3>Printed</h3>
+			<table id="bomtable">
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="finger_tip">
+					</td>
+					<td class="right">
+						<strong>4 x</strong>
+					</td>
+					<td>
+						<a href="#thing_finger_tip" rel="facebox" >Finger Tip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="palm">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_palm" rel="facebox" >Palm</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="finger_tip_mold">
+					</td>
+					<td class="right">
+						<strong>5 x</strong>
+					</td>
+					<td>
+						<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="finger_base">
+					</td>
+					<td class="right">
+						<strong>5 x</strong>
+					</td>
+					<td>
+						<a href="#thing_finger_base" rel="facebox" >Finger Base</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="thumb_tip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_thumb_tip" rel="facebox" >Thumb Tip</a>
+					</td>
+				</tr>
+			
+			</table>
+		
+			<h3>Molded</h3>
+			<table id="bomtable">
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="thumb_tip_grip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_thumb_tip_grip" rel="facebox" >Thumb Tip Grip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="finger_tip_grip">
+					</td>
+					<td class="right">
+						<strong>4 x</strong>
+					</td>
+					<td>
+						<a href="#thing_finger_tip_grip" rel="facebox" >Finger Tip Grip</a>
+					</td>
+				</tr>
+			
+			</table>
+		
+    </div>
+
+	<div id="things">
+		<h2>Things Overview</h2>
+		<p>List of things and their descriptions</p>
+		
+			<div id="thing_1" class="thing_overview" ></div>
+		
+			<div id="thing_thumb_tip_grip" class="thing_overview" >
+					<h3>Thumb Tip Grip</h3>
+					<div class="stuff">
+						        <p>Molded silicone grippy thumb tip</p>
+					</div>
+				</div>
+		
+			<div id="thing_finger_tip_grip" class="thing_overview" >
+					<h3>Finger Tip Grip</h3>
+					<div class="stuff">
+						        <p>Molded silicone grippy finger tip</p>
+					</div>
+				</div>
+		
+			<div id="thing_finger_tip" class="thing_overview" >
+					<h3>Finger Tip</h3>
+					<div class="stuff">
+						        <img src="images/finger_tip.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_finger_base" class="thing_overview" >
+					<h3>Finger Base</h3>
+					<div class="stuff">
+						        <img src="images/finger_base.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_thumb_tip" class="thing_overview" >
+					<h3>Thumb Tip</h3>
+					<div class="stuff">
+						        <img src="images/thumb_tip.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_thumb_assembly" class="thing_overview" >
+					<h3>Assembled Thumb</h3>
+					<div class="stuff">
+					</div>
+				</div>
+		
+			<div id="thing_finger_mid" class="thing_overview" >
+					<h3>Finger Middle</h3>
+					<div class="stuff">
+					</div>
+				</div>
+		
+			<div id="thing_palm" class="thing_overview" >
+					<h3>Palm</h3>
+					<div class="stuff">
+						        <img src="images/palm.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_flexy_joint" class="thing_overview" >
+					<h3>Flexy Joint</h3>
+					<div class="stuff">
+						        <p>Flex joint - can be molded in silicone or printed in Filaflex</p>
+					</div>
+				</div>
+		
+			<div id="thing_finger_assembly" class="thing_overview" >
+					<h3>Assembled Finger</h3>
+					<div class="stuff">
+					</div>
+				</div>
+		
+			<div id="thing_finger_tip_mold" class="thing_overview" >
+					<h3>Finger Tip Mold</h3>
+					<div class="stuff">
+						        <img src="images/finger_tip_mold.png" width="256" />
+					</div>
+				</div>
+		
+	</div>
+
+	<div id="assembly">
+		<h2>Assembly Instructions</h2>
+		
+	</div>
+
+<div class="generated">Generated by ThingDOC</span>
+    </div>
+    </div>
+  </body>
+</html>
+<!-- Generated on 2014/08/06 17:18:27 by ThingDoc -->

@@ -1,7 +1,14 @@
 include <../config.scad>
 include <finger_tip.scad>
 
-rotate([0,-90,0]) thumbtip();
+//rotate([0,-90,0]) thumbtip();
+
+/**
+ * @id thumb_tip
+ * @name Thumb Tip
+ * @category Printed
+ * @using 1 thumb_tip_grip
+ */
 
 module thumbtip()
 	{

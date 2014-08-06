@@ -1,0 +1,40 @@
+/**
+ * @id finger_assembly
+ * @name Assembled Finger
+ * @assembled
+ * @using 1 finger_base
+ * @using 1 finger_tip
+ * @using 2 flexy_joint
+ */
+
+/**
+ * @id thumb_assembly
+ * @name Assembled Thumb
+ * @assembled
+ * @using 1 finger_base
+ * @using 1 thumb_tip
+ * @using 2 flexy_joint
+ */
+
+/**
+ * Molded silicone grippy finger tip
+ * @id finger_tip_grip
+ * @name Finger Tip Grip
+ * @category Molded
+ * @using 1 finger_tip_mold
+ */
+
+/**
+ * Molded silicone grippy thumb tip
+ * @id thumb_tip_grip
+ * @name Thumb Tip Grip
+ * @category Molded
+ * @using 1 finger_tip_mold
+ */
+
+/**
+ * Flex joint - can be molded in silicone or printed in Filaflex
+ * @id flexy_joint
+ * @name Flexy Joint
+ * @category Flexible
+ */

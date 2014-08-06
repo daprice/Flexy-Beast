@@ -2,6 +2,12 @@ include <../config.scad>
 
 //cyborgbeastpalm();
 
+/**
+ * @id palm
+ * @name Palm
+ * @category Printed
+ */
+
 module cyborgbeastpalm()
 	{
 	difference()

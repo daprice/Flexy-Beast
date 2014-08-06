@@ -1,0 +1,22 @@
+Bill of Materials: Assembly
++++++++++++++++++++++++++++
+
+Flexible
+========
+- 10x Flexy Joint
+
+Printed
+=======
+- 4x Finger Tip
+- 1x Palm
+- 5x Finger Tip Mold
+- 5x Finger Base
+- 1x Thumb Tip
+
+Molded
+======
+- 1x Thumb Tip Grip
+- 4x Finger Tip Grip
+
+----
+Generated on 2014/08/06 17:18:27 by ThingDoc - http://thingdoc.org/
