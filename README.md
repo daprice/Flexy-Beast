@@ -1,7 +1,7 @@
 Flexy Beast
 ===========
 
-![Screenshot of Flexy Beast hand in OpenSCAD](assembly.png)
+![Screenshot of Flexy Beast hand in OpenSCAD](docs/images/assembly.png)
 
 The Flexy Beast is a wrist-powered prosthetic hand for the [e-NABLE Project](http://enablingthefuture.org). This is a mashup of the [Parametric Cyborg Beast](http://www.thingiverse.com/thing:320173) by MakerBlock and the [Flexy Hand](http://www.thingiverse.com/thing:380665) by Steve Wood/Gyrobot. Like the Flexy-Hand, the Flexy Beast uses flexible joints to replace the Chicago screws and elastics used on previous e-NABLE designs. This makes the hand lightweight, less expensive, better looking, more adaptable for smaller sizes, and easier to assemble and use.
 
