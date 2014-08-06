@@ -1,4 +1,9 @@
-include <flexyfinger_base.scad>
+include <../config.scad>
+include <finger_base.scad>
+include <finger_mid.scad>
+
+//rotate([0,-90,0]) fingertip_curved_solid(pad=fingerPads);
+
 module fingertip_curved_solid(length=17, pad=true, hole=true) {
 //	if (!pad)
 //		fingertip(length=length);

@@ -1,42 +1,13 @@
-//	To Do
-//	- Add in support structures
-//	- Optimize for scaling 105% to 150%
+include <config.scad>
 
-knuckleR = 4.85;
-knucklePadding = 0.5;
-knuckleW = 9.5;
-wristH = 10;
-palmH = 20;
-palmW = 64;
-th = 3;
-fn = 32;
-
-//flexy joint parameters
-jointDia = 7;
-jointThick = 4;
-
-//finger pad settings
-fingerPads = true; //whether or not to hollow the finger tips slightly for molding pads
-
-//desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
-xScaleFactor = 1.5; // [1.05:1.60]
-yScaleFactor = 1.5; // [1.05:1.60]
-zScaleFactor = 1.6; // [1.05:1.60]
-
-//	Scaling from 105% up to 150%
-
-//translate([0,0,0.02/2]) cube(0.02, center=true); //what is this doing here?
-
-include <parts/cyborgpalm001.scad>
-include <parts/flexyfinger_base.scad>
-include <parts/flexyfinger_mid.scad>
-include <parts/flexyfinger_tip.scad>
-include <parts/flexyfinger_tip_mold.scad>
-
-//	translate([30,0,0]) fingertipexamples(1);
+include <parts/palm.scad>
+include <parts/finger_base.scad>
+include <parts/finger_mid.scad>
+include <parts/finger_tip.scad>
+include <parts/finger_tip_mold.scad>
+include <parts/thumb_tip.scad>
 
 handlayout();
-//cyborgbeastpalm();
 
 module handlayout(sp = 14)
 	{
@@ -67,10 +38,3 @@ module fingerlayout(length=0)
 
 module thumbmid()
 	{ rotate([0,0,-90]) fingerbase(); }
-
-module thumbtip()
-	{
-	//	difference() {
-	fingertip_solid(length=20, pad=fingerPads);
-	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
-	}

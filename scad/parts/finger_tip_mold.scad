@@ -1,4 +1,7 @@
-include <flexyfinger_base.scad>
+include <../config.scad>
+include <finger_tip.scad>
+
+//fingertip_mold();
 
 module fingertip_mold(length=15) {
 	difference() {

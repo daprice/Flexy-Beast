@@ -1,3 +1,5 @@
+include <../config.scad>
+
 //rotate([0,-90,0]) fingerbase();
 
 //	Base segment of finger, can be lengthened

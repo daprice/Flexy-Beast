@@ -1,3 +1,7 @@
+include <../config.scad>
+
+//cyborgbeastpalm();
+
 module cyborgbeastpalm()
 	{
 	difference()
