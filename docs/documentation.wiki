@@ -1,5 +1,17 @@
 == Bill of Materials ==
 
+=== Prerequisites! ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 1 || Configuration File ||  ||  ||
+|}
+
 === Flexible ===
 {| class="wikitable sortable" border="1"
 |-
@@ -10,6 +22,18 @@
 ! scope="col" class="unsortable" | Diagram
 |-
 | 10 || Flexy Joint ||  ||  ||
+|}
+
+=== Other ===
+{| class="wikitable sortable" border="1"
+|-
+! scope="col" | Quantity
+! scope="col" | Description
+! scope="col" | Type
+! scope="col" class="unsortable" | Comments
+! scope="col" class="unsortable" | Diagram
+|-
+| 5 || String ||  ||  ||
 |}
 
 === Printed ===
@@ -23,25 +47,11 @@
 |-
 | 4 || Finger Tip ||  ||  || [[File:finger_tip.png|50px]]
 |-
-| 1 || Palm ||  ||  || [[File:palm.png|50px]]
-|-
 | 5 || Finger Tip Mold ||  ||  || [[File:finger_tip_mold.png|50px]]
+|-
+| 1 || Palm ||  ||  || [[File:palm.png|50px]]
 |-
 | 5 || Finger Base ||  ||  || [[File:finger_base.png|50px]]
 |-
 | 1 || Thumb Tip ||  ||  || [[File:thumb_tip.png|50px]]
-|}
-
-=== Molded ===
-{| class="wikitable sortable" border="1"
-|-
-! scope="col" | Quantity
-! scope="col" | Description
-! scope="col" | Type
-! scope="col" class="unsortable" | Comments
-! scope="col" class="unsortable" | Diagram
-|-
-| 1 || Thumb Tip Grip ||  ||  ||
-|-
-| 4 || Finger Tip Grip ||  ||  ||
 |}

@@ -3,8 +3,9 @@
  * @name Assembled Finger
  * @assembled
  * @using 1 finger_base
- * @using 1 finger_tip
+ * @using 1 finger_tip_grip
  * @using 2 flexy_joint
+ * @using 1 string
  */
 
 /**
@@ -12,29 +13,49 @@
  * @name Assembled Thumb
  * @assembled
  * @using 1 finger_base
- * @using 1 thumb_tip
+ * @using 1 thumb_tip_grip
  * @using 2 flexy_joint
+ * @using 1 string
  */
 
 /**
- * Molded silicone grippy finger tip
+ * The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Dragon Skin 10 silicone produces very soft and grippy pads; Dragon Skin 30 is tougher.
  * @id finger_tip_grip
- * @name Finger Tip Grip
- * @category Molded
+ * @name Grippy Finger Tip
+ * @assembled
  * @using 1 finger_tip_mold
+ * @using 1 finger_tip
+ * @step Print the finger tip and mold. [[pad_casting/Printed parts.jpg]]
+ * @step Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here). [[pad_casting/Fingertip with string.jpg]]
+ * @step Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone. [[pad_casting/Pouring part A.jpg]]
+ * @step Pour the liquid silicone to mostly fill the fingertip mold. [[pad_casting/Poured into mold.jpg]]
+ * @step Insert the printed fingertip piece into the filled mold. [[pad_casting/Inserting phalange.jpg]]
+ * @step Remove any excess silicone. If necessary, use tape to hold the phalange in place. [[pad_casting/Phalanges in mold.jpg]]
+ * @step When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately. [[pad_casting/Removing from mold.jpg]]
+ * @step If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip. [[pad_casting/Installing finger pad.jpg]]
+ * @step If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+ * @step The fingertip pads are finished. Continue installing them onto the hand. [[pad_casting/Assembled fingertip.jpg]]
  */
 
 /**
  * Molded silicone grippy thumb tip
  * @id thumb_tip_grip
- * @name Thumb Tip Grip
- * @category Molded
+ * @name Grippy Thumb Tip
+ * @assembled
+ * @using 1 thumb_tip
  * @using 1 finger_tip_mold
  */
 
 /**
- * Flex joint - can be molded in silicone or printed in Filaflex
+ * Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.
  * @id flexy_joint
  * @name Flexy Joint
  * @category Flexible
+ */
+
+/**
+ * Just some string
+ * @id string
+ * @name String
+ * @category Other
  */

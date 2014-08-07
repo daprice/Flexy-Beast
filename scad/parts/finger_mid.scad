@@ -3,12 +3,6 @@ include <finger_base.scad>
 
 //rotate([0,-90,0]) fingermid();
 
-/**
- * @id finger_mid
- * @name Finger Middle
- * @category Printed
- */
-
 //	Middle segment of finger, can be lengthened
 module fingermid(length=19, proximalHole=true, distalHole=true)
 {

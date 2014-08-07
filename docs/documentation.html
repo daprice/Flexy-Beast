@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Assembly by ThingDoc</title>
+    <title>Flexy Beast by ThingDoc</title>
     <link rel="stylesheet" type="text/css" href="html_data/thingdoc.css" />
    	<link rel="stylesheet" type="text/css" href="html_data/facebox.css" />
    	<link media="only screen and (max-device-width: 800px)" href="html_data/iphone.css" type="text/css" rel="stylesheet" />
@@ -37,13 +37,29 @@
     <div id="main"><div id="scroller">
 
     <div id="home">
-		<h1>Assembly</h1><img src="images/assembly.png" width="512" />
+		<h1>Flexy Beast</h1><img src="images/assembly.png" width="512" />
 		      <p>Assembly of Flexy Beast hand</p>
     </div>
 
     <div id="bom">
 		<h2>Bill of Materials</h2>
 		<p>Check all parts to get green <a href="#bom" class="button green smallbutton">BOM</a> button in menu, then proceed to the assembly.</p><p>Don't worry, the status of your BOM remains even after refreshing the page!</p>
+		
+			<h3>Prerequisites!</h3>
+			<table id="bomtable">
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="config_file">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_config_file" rel="facebox" >Configuration File</a>
+					</td>
+				</tr>
+			
+			</table>
 		
 			<h3>Flexible</h3>
 			<table id="bomtable">
@@ -56,6 +72,22 @@
 					</td>
 					<td>
 						<a href="#thing_flexy_joint" rel="facebox" >Flexy Joint</a>
+					</td>
+				</tr>
+			
+			</table>
+		
+			<h3>Other</h3>
+			<table id="bomtable">
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="string">
+					</td>
+					<td class="right">
+						<strong>5 x</strong>
+					</td>
+					<td>
+						<a href="#thing_string" rel="facebox" >String</a>
 					</td>
 				</tr>
 			
@@ -77,18 +109,6 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="palm">
-					</td>
-					<td class="right">
-						<strong>1 x</strong>
-					</td>
-					<td>
-						<a href="#thing_palm" rel="facebox" >Palm</a>
-					</td>
-				</tr>
-			
-				<tr>
-					<td>
 						<input type="checkbox" class="bom_checkbox" name="finger_tip_mold">
 					</td>
 					<td class="right">
@@ -96,6 +116,18 @@
 					</td>
 					<td>
 						<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="palm">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_palm" rel="facebox" >Palm</a>
 					</td>
 				</tr>
 			
@@ -125,34 +157,6 @@
 			
 			</table>
 		
-			<h3>Molded</h3>
-			<table id="bomtable">
-				<tr>
-					<td>
-						<input type="checkbox" class="bom_checkbox" name="thumb_tip_grip">
-					</td>
-					<td class="right">
-						<strong>1 x</strong>
-					</td>
-					<td>
-						<a href="#thing_thumb_tip_grip" rel="facebox" >Thumb Tip Grip</a>
-					</td>
-				</tr>
-			
-				<tr>
-					<td>
-						<input type="checkbox" class="bom_checkbox" name="finger_tip_grip">
-					</td>
-					<td class="right">
-						<strong>4 x</strong>
-					</td>
-					<td>
-						<a href="#thing_finger_tip_grip" rel="facebox" >Finger Tip Grip</a>
-					</td>
-				</tr>
-			
-			</table>
-		
     </div>
 
 	<div id="things">
@@ -162,16 +166,30 @@
 			<div id="thing_1" class="thing_overview" ></div>
 		
 			<div id="thing_thumb_tip_grip" class="thing_overview" >
-					<h3>Thumb Tip Grip</h3>
+					<h3>Grippy Thumb Tip</h3>
 					<div class="stuff">
 						        <p>Molded silicone grippy thumb tip</p>
 					</div>
 				</div>
 		
-			<div id="thing_finger_tip_grip" class="thing_overview" >
-					<h3>Finger Tip Grip</h3>
+			<div id="thing_config_file" class="thing_overview" >
+					<h3>Configuration File</h3>
 					<div class="stuff">
-						        <p>Molded silicone grippy finger tip</p>
+						        <p>Configuration settings for Flexy Beast, required to generate correctly sized STLs of the printed parts. See the Configuration File Assembly instructions to set this up.</p>
+					</div>
+				</div>
+		
+			<div id="thing_string" class="thing_overview" >
+					<h3>String</h3>
+					<div class="stuff">
+						        <p>Just some string</p>
+					</div>
+				</div>
+		
+			<div id="thing_finger_tip_grip" class="thing_overview" >
+					<h3>Grippy Finger Tip</h3>
+					<div class="stuff">
+						        <p>The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Dragon Skin 10 silicone produces very soft and grippy pads; Dragon Skin 30 is tougher.</p>
 					</div>
 				</div>
 		
@@ -202,12 +220,6 @@
 					</div>
 				</div>
 		
-			<div id="thing_finger_mid" class="thing_overview" >
-					<h3>Finger Middle</h3>
-					<div class="stuff">
-					</div>
-				</div>
-		
 			<div id="thing_palm" class="thing_overview" >
 					<h3>Palm</h3>
 					<div class="stuff">
@@ -218,7 +230,7 @@
 			<div id="thing_flexy_joint" class="thing_overview" >
 					<h3>Flexy Joint</h3>
 					<div class="stuff">
-						        <p>Flex joint - can be molded in silicone or printed in Filaflex</p>
+						        <p>Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.</p>
 					</div>
 				</div>
 		
@@ -240,6 +252,192 @@
 	<div id="assembly">
 		<h2>Assembly Instructions</h2>
 		
+			<div class="subassembly">
+				<h3>Assemble Configuration File</h3>
+				<div class="stuff">
+					<p>Steps:</p>
+					<ol>
+							<li>
+								Open config.scad in your favorite text editor.
+							</li>
+							<li>
+								As per the normal Cyborg Beast instructions, measure the width of the knuckles in the non-affected hand and convert to millimeters.
+							</li>
+							<li>
+								Add 5 to that result and then divide by 55.
+							</li>
+							<li>
+								Replace the x-, y-, and zScaleFactor variables in config.scad with that number.
+							</li>
+							<li>
+								If desired, adjust the proportions of the hand by changing those variables individually. xScaleFactor controls the width of the hand, yScaleFactor controls the length, and zScaleFactor controls the height.
+							</li>
+							<li>
+								Open assembly.scad in OpenSCAD to check that the flexy joint holes are not too large for the hand (should only be necessary for small children). If necessary, reduce the jointDia and jointThick variables. jointDia=5 and jointThick=2 is a good amount for smaller hands.
+							</li>
+							<li>
+								Set the fingerPads variable to true or false depending on whether you want to cast silicone finger pads for improved grip.
+							</li>
+							<li>
+								In palm.scad, finger_base.scad, finger_tip.scad, and thumb_tip.scad, uncomment the first line that renders the part.
+							</li>
+							<li>
+								Render each part (F6) and export as STL, then print.
+							</li>
+					</ol>
+				</div>
+			</div>
+		
+			<div class="subassembly">
+				<h3>Assemble Grippy Finger Tip</h3>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_finger_tip" rel="facebox" >Finger Tip</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
+								</td>
+							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>Print the finger tip and mold.<br/>
+								<a href="images/pad_casting/Printed parts.jpg" rel="facebox">
+									<img src="images/pad_casting/Printed parts.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).<br/>
+								<a href="images/pad_casting/Fingertip with string.jpg" rel="facebox">
+									<img src="images/pad_casting/Fingertip with string.jpg" width="256" />
+								</a>
+							</li>
+							<li>Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier&#39;s safety instructions while working with liquid silicone.<br/>
+								<a href="images/pad_casting/Pouring part A.jpg" rel="facebox">
+									<img src="images/pad_casting/Pouring part A.jpg" width="256" />
+								</a>
+							</li>
+							<li>Pour the liquid silicone to mostly fill the fingertip mold.<br/>
+								<a href="images/pad_casting/Poured into mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Poured into mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the printed fingertip piece into the filled mold.<br/>
+								<a href="images/pad_casting/Inserting phalange.jpg" rel="facebox">
+									<img src="images/pad_casting/Inserting phalange.jpg" width="256" />
+								</a>
+							</li>
+							<li>Remove any excess silicone. If necessary, use tape to hold the phalange in place.<br/>
+								<a href="images/pad_casting/Phalanges in mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Phalanges in mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.<br/>
+								<a href="images/pad_casting/Removing from mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Removing from mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.<br/>
+								<a href="images/pad_casting/Installing finger pad.jpg" rel="facebox">
+									<img src="images/pad_casting/Installing finger pad.jpg" width="256" />
+								</a>
+							</li>
+							<li>
+								If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+							</li>
+							<li>The fingertip pads are finished. Continue installing them onto the hand.<br/>
+								<a href="images/pad_casting/Assembled fingertip.jpg" rel="facebox">
+									<img src="images/pad_casting/Assembled fingertip.jpg" width="256" />
+								</a>
+							</li>
+					</ol>
+				</div>
+			</div>
+		
+			<div class="subassembly">
+				<h3>Assemble Flexy Beast</h3>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_palm" rel="facebox" >Palm</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_thumb_assembly" rel="facebox" >Assembled Thumb</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_config_file" rel="facebox" >Configuration File</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>4 x</strong>
+								</td>
+								<td>
+									<a href="#thing_finger_assembly" rel="facebox" >Assembled Finger</a>
+								</td>
+							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>
+								Print the palm, thumb base, thumb tip, and four each of the finger base and tip. These can be scaled as needed in each dimension using the x-, y-, and zScaleFactor variables in the OpenSCAD code.
+							</li>
+							<li>Insert a string through each fingertip (the hole may need to be drilled slightly to deburr) and tie it off on the end.<br/>
+								<a href="images/hand_assembly/Fingertip with string.jpg" rel="facebox">
+									<img src="images/hand_assembly/Fingertip with string.jpg" width="256" />
+								</a>
+							</li>
+							<li>After making the 3D printed parts and flexible joints, slide a flex joint into the proximal end of each finger.<br/>
+								<a href="images/hand_assembly/Inserting joint.jpg" rel="facebox">
+									<img src="images/hand_assembly/Inserting joint.jpg" width="256" />
+								</a>
+							</li>
+							<li>Use a flat screwdriver or other thin, flat tool to insert the other end of the joint into the corresponding slot on the next inner segment.<br/>
+								<a href="images/hand_assembly/Inserting joint with screwdriver.jpg" rel="facebox">
+									<img src="images/hand_assembly/Inserting joint with screwdriver.jpg" width="256" />
+								</a>
+							</li>
+							<li>Route the string through all the finger segments.<br/>
+								<a href="images/hand_assembly/String routing.jpg" rel="facebox">
+									<img src="images/hand_assembly/String routing.jpg" width="256" />
+								</a>
+							</li>
+							<li>Route the string through the palm.<br/>
+								<a href="images/hand_assembly/String routing through palm.jpg" rel="facebox">
+									<img src="images/hand_assembly/String routing through palm.jpg" width="256" />
+								</a>
+							</li>
+					</ol>
+				</div>
+			</div>
+		
 	</div>
 
 <div class="generated">Generated by ThingDOC</span>
@@ -247,4 +445,4 @@
     </div>
   </body>
 </html>
-<!-- Generated on 2014/08/06 17:18:27 by ThingDoc -->
+<!-- Generated on 2014/08/07 11:48:28 by ThingDoc -->

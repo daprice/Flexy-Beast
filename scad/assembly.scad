@@ -12,13 +12,20 @@ handlayout();
 /**
  * Assembly of Flexy Beast hand
  * @id assembly
- * @name Assembly
+ * @name Flexy Beast
  * @image assembly.png
  * @root
  * @assembled
+ * @using config_file
  * @using 1 palm
  * @using 4 finger_assembly
  * @using 1 thumb_assembly
+ * @step Print the palm, thumb base, thumb tip, and four each of the finger base and tip. These can be scaled as needed in each dimension using the x-, y-, and zScaleFactor variables in the OpenSCAD code.
+ * @step Insert a string through each fingertip (the hole may need to be drilled slightly to deburr) and tie it off on the end. [[hand_assembly/Fingertip with string.jpg]]
+ * @step After making the 3D printed parts and flexible joints, slide a flex joint into the proximal end of each finger. [[hand_assembly/Inserting joint.jpg]]
+ * @step Use a flat screwdriver or other thin, flat tool to insert the other end of the joint into the corresponding slot on the next inner segment. [[hand_assembly/Inserting joint with screwdriver.jpg]]
+ * @step Route the string through all the finger segments. [[hand_assembly/String routing.jpg]]
+ * @step Route the string through the palm. [[hand_assembly/String routing through palm.jpg]]
  */
 
 module handlayout(sp = 14)
