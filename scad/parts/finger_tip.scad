@@ -5,6 +5,7 @@ include <finger_mid.scad>
 //rotate([0,-90,0]) fingertip_curved_solid(pad=fingerPads);
 
 /**
+ * Distal phalanx of fingers - rendered from parts/finger_tip.scad
  * @id finger_tip
  * @name Finger Tip
  * @category Printed

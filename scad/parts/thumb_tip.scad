@@ -4,6 +4,7 @@ include <finger_tip.scad>
 //rotate([0,-90,0]) thumbtip();
 
 /**
+ * Distal phalanx of thumb - rendered from parts/thumb_tip.scad
  * @id thumb_tip
  * @name Thumb Tip
  * @category Printed

@@ -3,6 +3,7 @@ include <../config.scad>
 //cyborgbeastpalm();
 
 /**
+ * Palm - rendered from parts/palm.scad
  * @id palm
  * @name Palm
  * @category Printed

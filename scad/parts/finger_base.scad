@@ -3,6 +3,7 @@ include <../config.scad>
 //rotate([0,-90,0]) fingerbase();
 
 /**
+ * Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger_base.scad
  * @id finger_base
  * @name Finger Base
  * @category Printed

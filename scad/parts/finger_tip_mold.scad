@@ -4,6 +4,7 @@ include <finger_tip.scad>
 //fingertip_mold();
 
 /**
+ * Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad
  * @id finger_tip_mold
  * @name Finger Tip Mold
  * @category Printed
