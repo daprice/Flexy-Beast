@@ -26,7 +26,7 @@ List of things you need to build the machine divided by categories.
 
 \subsection{Prerequisites!}
 \begin{itemize}
-\item 1x \hyperlink{thing_config\_file}{Configuration File}
+\item 1x \hyperlink{thing_config_file}{Configuration File}
 \end{itemize}
 
 \subsection{Flexible}
@@ -64,20 +64,24 @@ Just some string
 
 \hypertarget{thing_finger\_tip\_grip}{\subsection{Grippy Finger Tip}}
 The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Dragon Skin 10 silicone produces very soft and grippy pads; Dragon Skin 30 is tougher.
-\includegraphics[width=4cm]{images/finger\_tip\_grip.jpg}
+\includegraphics[width=4cm]{images/finger_tip_grip.jpg}
 
 \hypertarget{thing_finger\_tip}{\subsection{Finger Tip}}
-\includegraphics[width=4cm]{images/finger\_tip.png}
+Distal phalanx of fingers - rendered from parts/finger\_tip.scad
+\includegraphics[width=4cm]{images/finger_tip.png}
 
 \hypertarget{thing_finger\_base}{\subsection{Finger Base}}
-\includegraphics[width=4cm]{images/finger\_base.png}
+Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger\_base.scad
+\includegraphics[width=4cm]{images/finger_base.png}
 
 \hypertarget{thing_thumb\_tip}{\subsection{Thumb Tip}}
-\includegraphics[width=4cm]{images/thumb\_tip.png}
+Distal phalanx of thumb - rendered from parts/thumb\_tip.scad
+\includegraphics[width=4cm]{images/thumb_tip.png}
 
 \hypertarget{thing_thumb\_assembly}{\subsection{Assembled Thumb}}
 
 \hypertarget{thing_palm}{\subsection{Palm}}
+Palm - rendered from parts/palm.scad
 \includegraphics[width=4cm]{images/palm.png}
 
 \hypertarget{thing_flexy\_joint}{\subsection{Flexy Joint}}
@@ -86,7 +90,8 @@ Flex joint - can be molded in silicone or printed in Filaflex. The Configuration
 \hypertarget{thing_finger\_assembly}{\subsection{Assembled Finger}}
 
 \hypertarget{thing_finger\_tip\_mold}{\subsection{Finger Tip Mold}}
-\includegraphics[width=4cm]{images/finger\_tip\_mold.png}
+Mold for casting silicone finger tip grip - rendered from parts/finger\_tip\_mold.scad
+\includegraphics[width=4cm]{images/finger_tip_mold.png}
 
 \newpage
 
@@ -113,16 +118,16 @@ Things needed:
 \end{itemize}
 Steps:
 \begin{enumerate}
-\item Print the finger tip and mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Printed parts.jpg}
-\item Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).\\ \includegraphics[width=4cm]{images/pad\_casting/Fingertip with string.jpg}
-\item Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone.\\ \includegraphics[width=4cm]{images/pad\_casting/Pouring part A.jpg}
-\item Pour the liquid silicone to mostly fill the fingertip mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Poured into mold.jpg}
-\item Insert the printed fingertip piece into the filled mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Inserting phalange.jpg}
-\item Remove any excess silicone. If necessary, use tape to hold the phalange in place.\\ \includegraphics[width=4cm]{images/pad\_casting/Phalanges in mold.jpg}
-\item When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.\\ \includegraphics[width=4cm]{images/pad\_casting/Removing from mold.jpg}
-\item If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.\\ \includegraphics[width=4cm]{images/pad\_casting/Installing finger pad.jpg}
+\item Print the finger tip and mold.\\ \includegraphics[width=4cm]{images/pad_casting/Printed parts.jpg}
+\item Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).\\ \includegraphics[width=4cm]{images/pad_casting/Fingertip with string.jpg}
+\item Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone.\\ \includegraphics[width=4cm]{images/pad_casting/Pouring part A.jpg}
+\item Pour the liquid silicone to mostly fill the fingertip mold.\\ \includegraphics[width=4cm]{images/pad_casting/Poured into mold.jpg}
+\item Insert the printed fingertip piece into the filled mold.\\ \includegraphics[width=4cm]{images/pad_casting/Inserting phalange.jpg}
+\item Remove any excess silicone. If necessary, use tape to hold the phalange in place.\\ \includegraphics[width=4cm]{images/pad_casting/Phalanges in mold.jpg}
+\item When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.\\ \includegraphics[width=4cm]{images/pad_casting/Removing from mold.jpg}
+\item If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.\\ \includegraphics[width=4cm]{images/pad_casting/Installing finger pad.jpg}
 \item If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
-\item The fingertip pads are finished. Continue installing them onto the hand.\\ \includegraphics[width=4cm]{images/pad\_casting/Assembled fingertip.jpg}
+\item The fingertip pads are finished. Continue installing them onto the hand.\\ \includegraphics[width=4cm]{images/pad_casting/Assembled fingertip.jpg}
 \end{enumerate}
 
 \subsection{Assemble Flexy Beast}
@@ -136,11 +141,11 @@ Things needed:
 Steps:
 \begin{enumerate}
 \item Print the palm, thumb base, thumb tip, and four each of the finger base and tip. These can be scaled as needed in each dimension using the x-, y-, and zScaleFactor variables in the OpenSCAD code.
-\item Insert a string through each fingertip (the hole may need to be drilled slightly to deburr) and tie it off on the end.\\ \includegraphics[width=4cm]{images/hand\_assembly/Fingertip with string.jpg}
-\item After making the 3D printed parts and flexible joints, slide a flex joint into the proximal end of each finger.\\ \includegraphics[width=4cm]{images/hand\_assembly/Inserting joint.jpg}
-\item Use a flat screwdriver or other thin, flat tool to insert the other end of the joint into the corresponding slot on the next inner segment.\\ \includegraphics[width=4cm]{images/hand\_assembly/Inserting joint with screwdriver.jpg}
-\item Route the string through all the finger segments.\\ \includegraphics[width=4cm]{images/hand\_assembly/String routing.jpg}
-\item Route the string through the palm.\\ \includegraphics[width=4cm]{images/hand\_assembly/String routing through palm.jpg}
+\item Insert a string through each fingertip (the hole may need to be drilled slightly to deburr) and tie it off on the end.\\ \includegraphics[width=4cm]{images/hand_assembly/Fingertip with string.jpg}
+\item After making the 3D printed parts and flexible joints, slide a flex joint into the proximal end of each finger.\\ \includegraphics[width=4cm]{images/hand_assembly/Inserting joint.jpg}
+\item Use a flat screwdriver or other thin, flat tool to insert the other end of the joint into the corresponding slot on the next inner segment.\\ \includegraphics[width=4cm]{images/hand_assembly/Inserting joint with screwdriver.jpg}
+\item Route the string through all the finger segments.\\ \includegraphics[width=4cm]{images/hand_assembly/String routing.jpg}
+\item Route the string through the palm.\\ \includegraphics[width=4cm]{images/hand_assembly/String routing through palm.jpg}
 \end{enumerate}
 
 \newpage
