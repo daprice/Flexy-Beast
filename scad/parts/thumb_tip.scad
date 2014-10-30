@@ -1,7 +1,7 @@
 include <../config.scad>
-include <finger_tip.scad>
+use <finger_tip.scad>
 
-//rotate([0,-90,0]) thumbtip();
+rotate([0,-90,0]) thumbtip();
 
 /**
  * Distal phalanx of thumb - rendered from parts/thumb_tip.scad

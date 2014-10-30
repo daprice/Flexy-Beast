@@ -1,6 +1,6 @@
 include <../config.scad>
 
-//rotate([0,-90,0]) fingerbase();
+rotate([0,-90,0]) fingerbase();
 
 /**
  * Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger_base.scad
@@ -36,7 +36,7 @@ module fingerhardwarecutouts(jointDia,jointThick,knuckleW,fingerLen,holeCutoff=1
 	}
 	//cubic parts
 	translate([-100,0,0]) cube([100,knuckleW*xScaleFactor,100]);
-	translate([-5.5*yScaleFactor,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,knuckleW * xScaleFactor, 10]);
+	translate([-13/zScaleFactor,0,0]) rotate([0,45,0]) translate([-50,0,0]) cube([100,knuckleW * xScaleFactor, 10]);
 
 	//channel for string/tendon
 	translate([-fingerLen/2 * yScaleFactor, knuckleW/2 * xScaleFactor, 2.3]) rotate([0,90,0]) cylinder(d=2.5, h=holeCutoff, $fn=50);

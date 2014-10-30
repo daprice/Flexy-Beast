@@ -1,7 +1,7 @@
 include <../config.scad>
-include <finger_base.scad>
+use <finger_base.scad>
 
-//rotate([0,-90,0]) fingermid();
+rotate([0,-90,0]) fingermid();
 
 //	Middle segment of finger, can be lengthened
 module fingermid(length=19, proximalHole=true, distalHole=true)

@@ -1,6 +1,6 @@
 include <../config.scad>
 
-//cyborgbeastpalm();
+cyborgbeastpalm();
 
 /**
  * Palm - rendered from parts/palm.scad
