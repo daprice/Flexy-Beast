@@ -1,11 +1,11 @@
 include <config.scad>
 
-include <parts/palm.scad>
-include <parts/finger_base.scad>
-include <parts/finger_mid.scad>
-include <parts/finger_tip.scad>
-include <parts/finger_tip_mold.scad>
-include <parts/thumb_tip.scad>
+use <parts/palm.scad>
+use <parts/finger_base.scad>
+use <parts/finger_mid.scad>
+use <parts/finger_tip.scad>
+use <parts/finger_tip_mold.scad>
+use <parts/thumb_tip.scad>
 
 handlayout();
 

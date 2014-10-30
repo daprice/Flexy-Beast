@@ -1,7 +1,7 @@
 include <../config.scad>
-include <finger_tip.scad>
+use <finger_tip.scad>
 
-//fingertip_mold();
+fingertip_mold();
 
 /**
  * Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad

@@ -1,8 +1,8 @@
 include <../config.scad>
-include <finger_base.scad>
-include <finger_mid.scad>
+use <finger_base.scad>
+use <finger_mid.scad>
 
-//rotate([0,-90,0]) fingertip_curved_solid(pad=fingerPads);
+rotate([0,-90,0]) fingertip_curved_solid(pad=fingerPads);
 
 /**
  * Distal phalanx of fingers - rendered from parts/finger_tip.scad
