@@ -43,7 +43,15 @@ module fingertip_pad(length) {
 	difference() {
 		fingertip(length,pad=false, proximalHole=false, cutout=false);
 		translate([0,-10,-10]) cube([length-7,50,50]);
-		translate([0,0.2*xScaleFactor,3.2*zScaleFactor]) cube([length+(3.3*xScaleFactor),xScaleFactor * (knuckleW - knucklePadding),5.75*zScaleFactor]);
+		assign($fn = 16) difference() {
+			translate([0,0.2*xScaleFactor,3.2*zScaleFactor]) cube([length+(3.3*yScaleFactor),xScaleFactor * (knuckleW - knucklePadding),5.75*zScaleFactor]);
+			//grooves for attachment of silicone pad:
+			translate([(length+(3.3*yScaleFactor))/3*2, 0.2*xScaleFactor, 3.2*zScaleFactor]) cylinder(d=2.5*yScaleFactor,h=5.75*zScaleFactor);
+			translate([(length+(3.3*yScaleFactor))/3*2, 0.2*xScaleFactor + (xScaleFactor * (knuckleW - knucklePadding)), 3.2*zScaleFactor]) cylinder(d=2.5*yScaleFactor,h=5.75*zScaleFactor);
+			translate([(length+(3.3*yScaleFactor))/3*2, 0.2*xScaleFactor, 3.2*zScaleFactor]) rotate([-90,0,0]) cylinder(d=2*zScaleFactor,h=xScaleFactor * (knuckleW - knucklePadding));
+			translate([(length+(3.3*yScaleFactor))/3*2, 0.2*xScaleFactor, 3.2*zScaleFactor + 5.75*zScaleFactor]) rotate([-90,0,0]) cylinder(d=1.25*zScaleFactor,h=xScaleFactor * (knuckleW - knucklePadding));
+		}
+		//"fingernail":
 		translate([0,xScaleFactor * knuckleW/2,0]) {
 			rotate([0,60,0]) cylinder(d=8, h=100);
 		}
