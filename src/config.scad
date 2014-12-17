@@ -29,6 +29,9 @@ jointThick = 4;
 //finger pad settings
 fingerPads = true; //whether or not to hollow the finger tips slightly for molding pads
 
+//misc settings
+thermoform = true; //whether or not to generate a thermoformable mesh for the palm
+
 //desired scale factor for hand based on the standard Cyborg Beast/Robohand sizing guide
 xScaleFactor = 1.65; // [1.05:1.60]
 yScaleFactor = 1.55; // [1.05:1.60]
