@@ -1,4 +1,5 @@
 include <../config.scad>
+use <thermoform.scad>
 
 cyborgbeastpalm();
 
@@ -10,7 +11,7 @@ cyborgbeastpalm();
  */
 
 module cyborgbeastpalm()
-	{
+{
 	difference()
 		{
 		scale([xScaleFactor,yScaleFactor,zScaleFactor])
@@ -58,7 +59,14 @@ module cyborgbeastpalm()
 		}
 		hardwarecutouts();
 		}
-	}	
+	
+	//the thermoform mesh
+	if(thermoform) intersection() {
+		scale([xScaleFactor+0.1,yScaleFactor+0.1,zScaleFactor+0.1])
+			cyborgbeast07palminsidespace();
+		translate([-35*xScaleFactor,-22*yScaleFactor,0]) thermoform_mesh(size=[70*xScaleFactor,50*yScaleFactor]);
+	}
+}	
 	
 module cyborgthumbsolid()
 	{
