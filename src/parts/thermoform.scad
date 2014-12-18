@@ -5,7 +5,7 @@ include <../config.scad>
 
 thermoform_mesh();
 
-module thermoform_mesh(size = [50,50], thickness = 3, hole_spacing = 1.5) {
+module thermoform_mesh(size = [50,50], thickness = 5, hole_spacing = 1.5) {
 	hole_size = [1.75, 5.5]; //dimensions of the holes in the mesh
 
 	difference() {
