@@ -4,7 +4,7 @@ use <parts/palm.scad>
 use <parts/util/finger_base.scad>
 use <parts/util/finger_mid.scad>
 use <parts/util/finger_tip.scad>
-use <parts/util/finger_tip_mold.scad>
+use <parts/finger_tip_mold.scad>
 use <parts/thumb_tip.scad>
 
 handlayout();
