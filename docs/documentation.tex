@@ -41,11 +41,18 @@ List of things you need to build the machine divided by categories.
 
 \subsection{Printed}
 \begin{itemize}
-\item 4x \hyperlink{thing_finger\_tip}{Finger Tip}
-\item 5x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
-\item 1x \hyperlink{thing_palm}{Palm}
-\item 5x \hyperlink{thing_finger\_base}{Finger Base}
 \item 1x \hyperlink{thing_thumb\_tip}{Thumb Tip}
+\item 1x \hyperlink{thing_index\_base}{Index Finger Base}
+\item 1x \hyperlink{thing_pinky\_tip}{Pinky Finger Tip}
+\item 5x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
+\item 1x \hyperlink{thing_pinky\_base}{Pinky Finger Base}
+\item 1x \hyperlink{thing_ring\_tip}{Ring Finger Tip}
+\item 1x \hyperlink{thing_index\_tip}{Index Finger Tip}
+\item 1x \hyperlink{thing_palm}{Palm}
+\item 1x \hyperlink{thing_ring\_base}{Ring Finger Base}
+\item 1x \hyperlink{thing_thumb\_base}{Thumb Base}
+\item 1x \hyperlink{thing_middle\_tip}{Middle Finger Tip}
+\item 1x \hyperlink{thing_middle\_base}{Middle Finger Base}
 \end{itemize}
 
 \newpage
@@ -53,8 +60,34 @@ List of things you need to build the machine divided by categories.
 \section{Things Overview}
 List of things and their descriptions.
 
-\hypertarget{thing_thumb\_tip\_grip}{\subsection{Grippy Thumb Tip}}
-Molded silicone grippy thumb tip
+\hypertarget{thing_middle\_finger\_assembly}{\subsection{Assembled Middle Finger}}
+
+\hypertarget{thing_ring\_finger\_assembly}{\subsection{Assembled Ring Finger}}
+
+\hypertarget{thing_palm}{\subsection{Palm}}
+Palm - rendered from parts/palm.scad
+\includegraphics[width=4cm]{images/palm.png}
+
+\hypertarget{thing_ring\_base}{\subsection{Ring Finger Base}}
+Proximal phalanx for ring finger - rendered from parts/finger_ring_base.scad
+
+\hypertarget{thing_finger\_tip\_mold}{\subsection{Finger Tip Mold}}
+Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad
+\includegraphics[width=4cm]{images/finger\_tip\_mold.png}
+
+\hypertarget{thing_middle\_tip}{\subsection{Middle Finger Tip}}
+Distal phalanx of middle finger - rendered from parts/finger_middle_tip.scad
+
+\hypertarget{thing_ring\_tip}{\subsection{Ring Finger Tip}}
+Distal phalanx of ring finger - rendered from parts/finger_ring_tip.scad
+
+\hypertarget{thing_flexy\_joint}{\subsection{Flexy Joint}}
+Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.
+
+\hypertarget{thing_thumb\_base}{\subsection{Thumb Base}}
+Proximal phalanx for thumb - rendered from parts/thumb_base.scad
+
+\hypertarget{thing_pinky\_finger\_assembly}{\subsection{Assembled Pinky Finger}}
 
 \hypertarget{thing_config\_file}{\subsection{Configuration File}}
 Configuration settings for Flexy Beast, required to generate correctly sized STLs of the printed parts. See the Configuration File Assembly instructions to set this up.
@@ -62,17 +95,21 @@ Configuration settings for Flexy Beast, required to generate correctly sized STL
 \hypertarget{thing_string}{\subsection{String}}
 Just some string
 
+\hypertarget{thing_pinky\_tip}{\subsection{Pinky Finger Tip}}
+Distal phalanx of pinky finger - rendered from parts/finger_pinky_tip.scad
+
+\hypertarget{thing_middle\_base}{\subsection{Middle Finger Base}}
+Proximal phalanx for middle finger - rendered from parts/finger_middle_base.scad
+
+\hypertarget{thing_thumb\_tip\_grip}{\subsection{Grippy Thumb Tip}}
+Molded silicone grippy thumb tip
+
+\hypertarget{thing_index\_base}{\subsection{Index Finger Base}}
+Proximal phalanx for index finger - rendered from parts/finger_index_base.scad
+
 \hypertarget{thing_finger\_tip\_grip}{\subsection{Grippy Finger Tip}}
 The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Dragon Skin 10 silicone produces very soft and grippy pads; Dragon Skin 30 is tougher.
 \includegraphics[width=4cm]{images/finger\_tip\_grip.jpg}
-
-\hypertarget{thing_finger\_tip}{\subsection{Finger Tip}}
-Distal phalanx of fingers - rendered from parts/finger_tip.scad
-\includegraphics[width=4cm]{images/finger\_tip.png}
-
-\hypertarget{thing_finger\_base}{\subsection{Finger Base}}
-Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger_base.scad
-\includegraphics[width=4cm]{images/finger\_base.png}
 
 \hypertarget{thing_thumb\_tip}{\subsection{Thumb Tip}}
 Distal phalanx of thumb - rendered from parts/thumb_tip.scad
@@ -80,22 +117,55 @@ Distal phalanx of thumb - rendered from parts/thumb_tip.scad
 
 \hypertarget{thing_thumb\_assembly}{\subsection{Assembled Thumb}}
 
-\hypertarget{thing_palm}{\subsection{Palm}}
-Palm - rendered from parts/palm.scad
-\includegraphics[width=4cm]{images/palm.png}
+\hypertarget{thing_index\_tip}{\subsection{Index Finger Tip}}
+Distal phalanx of index finger - rendered from parts/finger_index_tip.scad
 
-\hypertarget{thing_flexy\_joint}{\subsection{Flexy Joint}}
-Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.
+\hypertarget{thing_index\_finger\_assembly}{\subsection{Assembled Index Finger}}
 
-\hypertarget{thing_finger\_assembly}{\subsection{Assembled Finger}}
-
-\hypertarget{thing_finger\_tip\_mold}{\subsection{Finger Tip Mold}}
-Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad
-\includegraphics[width=4cm]{images/finger\_tip\_mold.png}
+\hypertarget{thing_pinky\_base}{\subsection{Pinky Finger Base}}
+Proximal phalanx for pinky finger - rendered from parts/finger_pinky_base.scad
 
 \newpage
 
 \section{Assembly Instructions}
+
+\subsection{Assemble Grippy Finger Tip}
+Things needed:
+\begin{itemize}
+\item 1x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
+\end{itemize}
+Steps:
+\begin{enumerate}
+\item Print the finger tip and mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Printed parts.jpg}
+\item Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).\\ \includegraphics[width=4cm]{images/pad\_casting/Fingertip with string.jpg}
+\item Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone.\\ \includegraphics[width=4cm]{images/pad\_casting/Pouring part A.jpg}
+\item Pour the liquid silicone to mostly fill the fingertip mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Poured into mold.jpg}
+\item Insert the printed fingertip piece into the filled mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Inserting phalange.jpg}
+\item Remove any excess silicone. If necessary, use tape to hold the phalange in place.\\ \includegraphics[width=4cm]{images/pad\_casting/Phalanges in mold.jpg}
+\item When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.\\ \includegraphics[width=4cm]{images/pad\_casting/Removing from mold.jpg}
+\item If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.\\ \includegraphics[width=4cm]{images/pad\_casting/Installing finger pad.jpg}
+\item If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+\item The fingertip pads are finished. Continue installing them onto the hand.\\ \includegraphics[width=4cm]{images/pad\_casting/Assembled fingertip.jpg}
+\end{enumerate}
+
+\subsection{Assemble Grippy Finger Tip}
+Things needed:
+\begin{itemize}
+\item 1x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
+\end{itemize}
+Steps:
+\begin{enumerate}
+\item Print the finger tip and mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Printed parts.jpg}
+\item Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).\\ \includegraphics[width=4cm]{images/pad\_casting/Fingertip with string.jpg}
+\item Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone.\\ \includegraphics[width=4cm]{images/pad\_casting/Pouring part A.jpg}
+\item Pour the liquid silicone to mostly fill the fingertip mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Poured into mold.jpg}
+\item Insert the printed fingertip piece into the filled mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Inserting phalange.jpg}
+\item Remove any excess silicone. If necessary, use tape to hold the phalange in place.\\ \includegraphics[width=4cm]{images/pad\_casting/Phalanges in mold.jpg}
+\item When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.\\ \includegraphics[width=4cm]{images/pad\_casting/Removing from mold.jpg}
+\item If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.\\ \includegraphics[width=4cm]{images/pad\_casting/Installing finger pad.jpg}
+\item If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+\item The fingertip pads are finished. Continue installing them onto the hand.\\ \includegraphics[width=4cm]{images/pad\_casting/Assembled fingertip.jpg}
+\end{enumerate}
 
 \subsection{Assemble Configuration File}Steps:
 \begin{enumerate}
@@ -112,7 +182,25 @@ Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.
 \subsection{Assemble Grippy Finger Tip}
 Things needed:
 \begin{itemize}
-\item 1x \hyperlink{thing_finger\_tip}{Finger Tip}
+\item 1x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
+\end{itemize}
+Steps:
+\begin{enumerate}
+\item Print the finger tip and mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Printed parts.jpg}
+\item Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).\\ \includegraphics[width=4cm]{images/pad\_casting/Fingertip with string.jpg}
+\item Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone.\\ \includegraphics[width=4cm]{images/pad\_casting/Pouring part A.jpg}
+\item Pour the liquid silicone to mostly fill the fingertip mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Poured into mold.jpg}
+\item Insert the printed fingertip piece into the filled mold.\\ \includegraphics[width=4cm]{images/pad\_casting/Inserting phalange.jpg}
+\item Remove any excess silicone. If necessary, use tape to hold the phalange in place.\\ \includegraphics[width=4cm]{images/pad\_casting/Phalanges in mold.jpg}
+\item When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.\\ \includegraphics[width=4cm]{images/pad\_casting/Removing from mold.jpg}
+\item If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.\\ \includegraphics[width=4cm]{images/pad\_casting/Installing finger pad.jpg}
+\item If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+\item The fingertip pads are finished. Continue installing them onto the hand.\\ \includegraphics[width=4cm]{images/pad\_casting/Assembled fingertip.jpg}
+\end{enumerate}
+
+\subsection{Assemble Grippy Finger Tip}
+Things needed:
+\begin{itemize}
 \item 1x \hyperlink{thing_finger\_tip\_mold}{Finger Tip Mold}
 \end{itemize}
 Steps:
@@ -132,10 +220,13 @@ Steps:
 \subsection{Assemble Flexy Beast}
 Things needed:
 \begin{itemize}
-\item 1x \hyperlink{thing_palm}{Palm}
-\item 1x \hyperlink{thing_thumb\_assembly}{Assembled Thumb}
+\item 1x \hyperlink{thing_middle\_finger\_assembly}{Assembled Middle Finger}
+\item 1x \hyperlink{thing_pinky\_finger\_assembly}{Assembled Pinky Finger}
 \item 1x \hyperlink{thing_config\_file}{Configuration File}
-\item 4x \hyperlink{thing_finger\_assembly}{Assembled Finger}
+\item 1x \hyperlink{thing_thumb\_assembly}{Assembled Thumb}
+\item 1x \hyperlink{thing_ring\_finger\_assembly}{Assembled Ring Finger}
+\item 1x \hyperlink{thing_palm}{Palm}
+\item 1x \hyperlink{thing_index\_finger\_assembly}{Assembled Index Finger}
 \end{itemize}
 Steps:
 \begin{enumerate}

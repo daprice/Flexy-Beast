@@ -1,5 +1,5 @@
 include <../config.scad>
-use <thermoform.scad>
+use <util/thermoform.scad>
 
 cyborgbeastpalm();
 

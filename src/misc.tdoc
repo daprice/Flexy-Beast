@@ -1,8 +1,42 @@
 /**
- * @id finger_assembly
- * @name Assembled Finger
+ * @id index_finger_assembly
+ * @name Assembled Index Finger
  * @assembled
- * @using 1 finger_base
+ * @using 1 index_base
+ * @using 1 index_tip
+ * @using 1 finger_tip_grip
+ * @using 2 flexy_joint
+ * @using 1 string
+ */
+ 
+/**
+ * @id middle_finger_assembly
+ * @name Assembled Middle Finger
+ * @assembled
+ * @using 1 middle_base
+ * @using 1 middle_tip
+ * @using 1 finger_tip_grip
+ * @using 2 flexy_joint
+ * @using 1 string
+ */
+ 
+/**
+ * @id ring_finger_assembly
+ * @name Assembled Ring Finger
+ * @assembled
+ * @using 1 ring_base
+ * @using 1 ring_tip
+ * @using 1 finger_tip_grip
+ * @using 2 flexy_joint
+ * @using 1 string
+ */
+ 
+/**
+ * @id pinky_finger_assembly
+ * @name Assembled Pinky Finger
+ * @assembled
+ * @using 1 pinky_base
+ * @using 1 pinky_tip
  * @using 1 finger_tip_grip
  * @using 2 flexy_joint
  * @using 1 string
@@ -12,7 +46,7 @@
  * @id thumb_assembly
  * @name Assembled Thumb
  * @assembled
- * @using 1 finger_base
+ * @using 1 thumb_base
  * @using 1 thumb_tip_grip
  * @using 2 flexy_joint
  * @using 1 string
@@ -25,7 +59,6 @@
  * @image finger_tip_grip.jpg
  * @assembled
  * @using 1 finger_tip_mold
- * @using 1 finger_tip
  * @step Print the finger tip and mold. [[pad_casting/Printed parts.jpg]]
  * @step Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here). [[pad_casting/Fingertip with string.jpg]]
  * @step Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier's safety instructions while working with liquid silicone. [[pad_casting/Pouring part A.jpg]]

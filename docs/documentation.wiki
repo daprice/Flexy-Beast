@@ -45,13 +45,27 @@
 ! scope="col" class="unsortable" | Comments
 ! scope="col" class="unsortable" | Diagram
 |-
-| 4 || Finger Tip ||  ||  || [[File:finger_tip.png|50px]]
+| 1 || Thumb Tip ||  ||  || [[File:thumb_tip.png|50px]]
+|-
+| 1 || Index Finger Base ||  ||  ||
+|-
+| 1 || Pinky Finger Tip ||  ||  ||
 |-
 | 5 || Finger Tip Mold ||  ||  || [[File:finger_tip_mold.png|50px]]
 |-
+| 1 || Pinky Finger Base ||  ||  ||
+|-
+| 1 || Ring Finger Tip ||  ||  ||
+|-
+| 1 || Index Finger Tip ||  ||  ||
+|-
 | 1 || Palm ||  ||  || [[File:palm.png|50px]]
 |-
-| 5 || Finger Base ||  ||  || [[File:finger_base.png|50px]]
+| 1 || Ring Finger Base ||  ||  ||
 |-
-| 1 || Thumb Tip ||  ||  || [[File:thumb_tip.png|50px]]
+| 1 || Thumb Base ||  ||  ||
+|-
+| 1 || Middle Finger Tip ||  ||  ||
+|-
+| 1 || Middle Finger Base ||  ||  ||
 |}
