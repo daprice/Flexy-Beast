@@ -1,15 +1,8 @@
-include <../config.scad>
+include <../../config.scad>
 use <finger_base.scad>
 use <finger_mid.scad>
 
 rotate([0,-90,0]) fingertip_curved_solid(pad=fingerPads);
-
-/**
- * Distal phalanx of fingers - rendered from parts/finger_tip.scad
- * @id finger_tip
- * @name Finger Tip
- * @category Printed
- */
 
 module fingertip_curved_solid(length=17, pad=true, hole=true) {
 //	if (!pad)
@@ -18,12 +11,12 @@ module fingertip_curved_solid(length=17, pad=true, hole=true) {
 		render() difference() {
 			union() {
 				fingermid(length=length+3, proximalHole=true, distalHole=false);
-				translate([length*yScaleFactor - 0.5,0,1.6*zScaleFactor]) rotate([0,30,0]) fingertip(length=length, proximalHole=false, cutout=false);
+				translate([length*yScaleFactor - 0.5,0,1.6*zScaleFactor]) rotate([0,30,0]) fingertip(length=15, proximalHole=false, cutout=false);
 			}
 			//hole for string
 			if(hole) translate([0,xScaleFactor * knuckleW/2,2]) rotate([0,90,0]) cylinder(d=2.5,h=100, $fn=50);
 			//hollow for soft pad
-			if(pad) translate([length*yScaleFactor - 0.5,0,1.6*zScaleFactor]) rotate([0,30,0]) fingertip_pad(length);
+			if(pad) translate([length*yScaleFactor - 0.5,0,1.6*zScaleFactor]) rotate([0,30,0]) fingertip_pad(length=15);
 		}
 //	}
 }

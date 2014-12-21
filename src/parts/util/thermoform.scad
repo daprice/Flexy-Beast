@@ -1,4 +1,4 @@
-include <../config.scad>
+include <../../config.scad>
 
 //generates a thermoformable mesh (intended for printing in PLA, then heating and fitting to a patient)
 // at the desired size and thickness

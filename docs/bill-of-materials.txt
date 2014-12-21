@@ -15,11 +15,18 @@ Other
 
 Printed
 =======
-- 4x Finger Tip
-- 5x Finger Tip Mold
-- 1x Palm
-- 5x Finger Base
 - 1x Thumb Tip
+- 1x Index Finger Base
+- 1x Pinky Finger Tip
+- 5x Finger Tip Mold
+- 1x Pinky Finger Base
+- 1x Ring Finger Tip
+- 1x Index Finger Tip
+- 1x Palm
+- 1x Ring Finger Base
+- 1x Thumb Base
+- 1x Middle Finger Tip
+- 1x Middle Finger Base
 
 ----
-Generated on 2014/10/30 16:21:52 by ThingDoc - http://thingdoc.org/
+Generated on 2014/12/20 22:11:11 by ThingDoc - http://thingdoc.org/

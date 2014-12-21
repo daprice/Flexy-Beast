@@ -1,16 +1,9 @@
-include <../config.scad>
+include <../../config.scad>
 
 rotate([0,-90,0]) fingerbase();
 
-/**
- * Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger_base.scad
- * @id finger_base
- * @name Finger Base
- * @category Printed
- */
-
 //	Base segment of finger, can be lengthened
-module fingerbase(length=23, proximalHole=true, distalHole=true)
+module fingerbase(length=20, proximalHole=true, distalHole=true)
 {
 	difference() {
 		scale([yScaleFactor,xScaleFactor,zScaleFactor]) {
