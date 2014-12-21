@@ -1,5 +1,5 @@
 include <../config.scad>
-use <finger_tip.scad>
+use <util/finger_tip.scad>
 
 fingertip_mold();
 
