@@ -16,7 +16,7 @@
 knuckleR = 4.85;
 knucklePadding = 0.5;
 knuckleW = 9.5;
-wristH = 10;
+wristH = 11;
 palmH = 20;
 palmW = 64;
 th = 3;
