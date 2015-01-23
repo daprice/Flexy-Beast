@@ -28,6 +28,7 @@ jointThick = 4;
 
 //finger settings
 fingerPads = true; //whether or not to hollow the finger tips slightly for molding pads
+padPositive = false; //if false (default), finger_tip_mold.scad renders a mold to make silicone finger pads; if true, renders a printable flexible finger pad
 fingerLength = 1; //multiply the length of all fingers by this amount
 thumbProp = 0.8; //proportion of thumb length relative to other fingers (note that the thumb is a segment shorter than the other fingers already)
 indexProp = 0.8; //proportion of index finger length relative to other fingers
