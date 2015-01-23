@@ -1,4 +1,5 @@
 include <../config.scad>
+use <util/thermoform.scad>
 
 cyborgbeastpalm();
 
@@ -10,7 +11,7 @@ cyborgbeastpalm();
  */
 
 module cyborgbeastpalm()
-	{
+{
 	difference()
 		{
 		scale([xScaleFactor,yScaleFactor,zScaleFactor])
@@ -46,7 +47,7 @@ module cyborgbeastpalm()
 				//channel for string to thumb
 				translate([0,5.5,-5]) rotate([0,90,40]) translate([0,0,-7.5]) cylinder(r=1.25*(1/yScaleFactor), h=5, $fn=fn/2);
 				//thumb cutout
-				rotate([-72,20,0]) 
+				rotate([-70,20,0]) 
 					translate([11,4.1,0]) {
 						cube([21.6,15,knuckleW + knucklePadding], center=true);
 						rotate([0,0,-50]) cube([50,19.5,knuckleW + knucklePadding], center=true);
@@ -58,7 +59,14 @@ module cyborgbeastpalm()
 		}
 		hardwarecutouts();
 		}
-	}	
+	
+	//the thermoform mesh
+	if(thermoform) intersection() {
+		scale([xScaleFactor+0.1,yScaleFactor+0.1,zScaleFactor+0.1])
+			cyborgbeast07palminsidespace();
+		translate([-35*xScaleFactor,-22*yScaleFactor,0]) thermoform_mesh(size=[70*xScaleFactor,50*yScaleFactor]);
+	}
+}	
 	
 module cyborgthumbsolid()
 	{
@@ -153,7 +161,7 @@ module hardwarecutouts()
 			}
 	//	Holes for thumb knuckle - used to hold the stretchy joint in Flexy Beast
 		translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
-			rotate([-72,20,0]) translate([-4.75,-0.5*yScaleFactor,0.7]) {
+			rotate([-70,20,0]) translate([-4.75,-0.5*yScaleFactor,0.7]) {
 				cylinder(d=7, h=knuckleW*yScaleFactor + knucklePadding*yScaleFactor, center=true, $fn=fn/2);
 				translate([25,0,0]) cube([50,jointThick,knuckleW*yScaleFactor + knucklePadding*yScaleFactor], center=true);
 			}

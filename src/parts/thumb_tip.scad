@@ -1,5 +1,5 @@
 include <../config.scad>
-use <finger_tip.scad>
+use <util/finger_tip.scad>
 
 rotate([0,-90,0]) thumbtip();
 
@@ -13,6 +13,6 @@ rotate([0,-90,0]) thumbtip();
 module thumbtip()
 	{
 	//	difference() {
-	fingertip_solid(length=20, pad=fingerPads);
+	fingertip_solid(length=18, pad=fingerPads);
 	//	translate([20/2,0,0]) cube([20,70,50], center=true); }
 	}

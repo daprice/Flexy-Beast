@@ -97,13 +97,37 @@
 			<table id="bomtable">
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="finger_tip">
+						<input type="checkbox" class="bom_checkbox" name="thumb_tip">
 					</td>
 					<td class="right">
-						<strong>4 x</strong>
+						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_finger_tip" rel="facebox" >Finger Tip</a>
+						<a href="#thing_thumb_tip" rel="facebox" >Thumb Tip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="index_base">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_index_base" rel="facebox" >Index Finger Base</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="pinky_tip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_pinky_tip" rel="facebox" >Pinky Finger Tip</a>
 					</td>
 				</tr>
 			
@@ -121,6 +145,42 @@
 			
 				<tr>
 					<td>
+						<input type="checkbox" class="bom_checkbox" name="pinky_base">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_pinky_base" rel="facebox" >Pinky Finger Base</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="ring_tip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_ring_tip" rel="facebox" >Ring Finger Tip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="index_tip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_index_tip" rel="facebox" >Index Finger Tip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
 						<input type="checkbox" class="bom_checkbox" name="palm">
 					</td>
 					<td class="right">
@@ -133,25 +193,49 @@
 			
 				<tr>
 					<td>
-						<input type="checkbox" class="bom_checkbox" name="finger_base">
-					</td>
-					<td class="right">
-						<strong>5 x</strong>
-					</td>
-					<td>
-						<a href="#thing_finger_base" rel="facebox" >Finger Base</a>
-					</td>
-				</tr>
-			
-				<tr>
-					<td>
-						<input type="checkbox" class="bom_checkbox" name="thumb_tip">
+						<input type="checkbox" class="bom_checkbox" name="ring_base">
 					</td>
 					<td class="right">
 						<strong>1 x</strong>
 					</td>
 					<td>
-						<a href="#thing_thumb_tip" rel="facebox" >Thumb Tip</a>
+						<a href="#thing_ring_base" rel="facebox" >Ring Finger Base</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="thumb_base">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_thumb_base" rel="facebox" >Thumb Base</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="middle_tip">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_middle_tip" rel="facebox" >Middle Finger Tip</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td>
+						<input type="checkbox" class="bom_checkbox" name="middle_base">
+					</td>
+					<td class="right">
+						<strong>1 x</strong>
+					</td>
+					<td>
+						<a href="#thing_middle_base" rel="facebox" >Middle Finger Base</a>
 					</td>
 				</tr>
 			
@@ -165,10 +249,72 @@
 		
 			<div id="thing_1" class="thing_overview" ></div>
 		
-			<div id="thing_thumb_tip_grip" class="thing_overview" >
-					<h3>Grippy Thumb Tip</h3>
+			<div id="thing_middle_finger_assembly" class="thing_overview" >
+					<h3>Assembled Middle Finger</h3>
 					<div class="stuff">
-						        <p>Molded silicone grippy thumb tip</p>
+					</div>
+				</div>
+		
+			<div id="thing_ring_finger_assembly" class="thing_overview" >
+					<h3>Assembled Ring Finger</h3>
+					<div class="stuff">
+					</div>
+				</div>
+		
+			<div id="thing_palm" class="thing_overview" >
+					<h3>Palm</h3>
+					<div class="stuff">
+						        <p>Palm - rendered from parts/palm.scad</p>
+						        <img src="images/palm.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_ring_base" class="thing_overview" >
+					<h3>Ring Finger Base</h3>
+					<div class="stuff">
+						        <p>Proximal phalanx for ring finger - rendered from parts/finger_ring_base.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_finger_tip_mold" class="thing_overview" >
+					<h3>Finger Tip Mold</h3>
+					<div class="stuff">
+						        <p>Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad</p>
+						        <img src="images/finger_tip_mold.png" width="256" />
+					</div>
+				</div>
+		
+			<div id="thing_middle_tip" class="thing_overview" >
+					<h3>Middle Finger Tip</h3>
+					<div class="stuff">
+						        <p>Distal phalanx of middle finger - rendered from parts/finger_middle_tip.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_ring_tip" class="thing_overview" >
+					<h3>Ring Finger Tip</h3>
+					<div class="stuff">
+						        <p>Distal phalanx of ring finger - rendered from parts/finger_ring_tip.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_flexy_joint" class="thing_overview" >
+					<h3>Flexy Joint</h3>
+					<div class="stuff">
+						        <p>Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.</p>
+					</div>
+				</div>
+		
+			<div id="thing_thumb_base" class="thing_overview" >
+					<h3>Thumb Base</h3>
+					<div class="stuff">
+						        <p>Proximal phalanx for thumb - rendered from parts/thumb_base.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_pinky_finger_assembly" class="thing_overview" >
+					<h3>Assembled Pinky Finger</h3>
+					<div class="stuff">
 					</div>
 				</div>
 		
@@ -186,27 +332,39 @@
 					</div>
 				</div>
 		
+			<div id="thing_pinky_tip" class="thing_overview" >
+					<h3>Pinky Finger Tip</h3>
+					<div class="stuff">
+						        <p>Distal phalanx of pinky finger - rendered from parts/finger_pinky_tip.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_middle_base" class="thing_overview" >
+					<h3>Middle Finger Base</h3>
+					<div class="stuff">
+						        <p>Proximal phalanx for middle finger - rendered from parts/finger_middle_base.scad</p>
+					</div>
+				</div>
+		
+			<div id="thing_thumb_tip_grip" class="thing_overview" >
+					<h3>Grippy Thumb Tip</h3>
+					<div class="stuff">
+						        <p>Molded silicone grippy thumb tip</p>
+					</div>
+				</div>
+		
+			<div id="thing_index_base" class="thing_overview" >
+					<h3>Index Finger Base</h3>
+					<div class="stuff">
+						        <p>Proximal phalanx for index finger - rendered from parts/finger_index_base.scad</p>
+					</div>
+				</div>
+		
 			<div id="thing_finger_tip_grip" class="thing_overview" >
 					<h3>Grippy Finger Tip</h3>
 					<div class="stuff">
 						        <p>The Flexy Beast fingers can be made with silicone finger pads for improved grip. These finger pads are designed to be easily removeable and replaceable by hand, but attach firmly enough to stay on during use. Dragon Skin 10 silicone produces very soft and grippy pads; Dragon Skin 30 is tougher.</p>
 						        <img src="images/finger_tip_grip.jpg" width="256" />
-					</div>
-				</div>
-		
-			<div id="thing_finger_tip" class="thing_overview" >
-					<h3>Finger Tip</h3>
-					<div class="stuff">
-						        <p>Distal phalanx of fingers - rendered from parts/finger_tip.scad</p>
-						        <img src="images/finger_tip.png" width="256" />
-					</div>
-				</div>
-		
-			<div id="thing_finger_base" class="thing_overview" >
-					<h3>Finger Base</h3>
-					<div class="stuff">
-						        <p>Proximal phalanx for all digits (fingers and thumb) - rendered from parts/finger_base.scad</p>
-						        <img src="images/finger_base.png" width="256" />
 					</div>
 				</div>
 		
@@ -224,32 +382,23 @@
 					</div>
 				</div>
 		
-			<div id="thing_palm" class="thing_overview" >
-					<h3>Palm</h3>
+			<div id="thing_index_tip" class="thing_overview" >
+					<h3>Index Finger Tip</h3>
 					<div class="stuff">
-						        <p>Palm - rendered from parts/palm.scad</p>
-						        <img src="images/palm.png" width="256" />
+						        <p>Distal phalanx of index finger - rendered from parts/finger_index_tip.scad</p>
 					</div>
 				</div>
 		
-			<div id="thing_flexy_joint" class="thing_overview" >
-					<h3>Flexy Joint</h3>
-					<div class="stuff">
-						        <p>Flex joint - can be molded in silicone or printed in Filaflex. The Configuration File instructions will help you find a good size for these.</p>
-					</div>
-				</div>
-		
-			<div id="thing_finger_assembly" class="thing_overview" >
-					<h3>Assembled Finger</h3>
+			<div id="thing_index_finger_assembly" class="thing_overview" >
+					<h3>Assembled Index Finger</h3>
 					<div class="stuff">
 					</div>
 				</div>
 		
-			<div id="thing_finger_tip_mold" class="thing_overview" >
-					<h3>Finger Tip Mold</h3>
+			<div id="thing_pinky_base" class="thing_overview" >
+					<h3>Pinky Finger Base</h3>
 					<div class="stuff">
-						        <p>Mold for casting silicone finger tip grip - rendered from parts/finger_tip_mold.scad</p>
-						        <img src="images/finger_tip_mold.png" width="256" />
+						        <p>Proximal phalanx for pinky finger - rendered from parts/finger_pinky_base.scad</p>
 					</div>
 				</div>
 		
@@ -257,6 +406,144 @@
 
 	<div id="assembly">
 		<h2>Assembly Instructions</h2>
+		
+			<div class="subassembly">
+				<h3>Assemble Grippy Finger Tip</h3>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
+								</td>
+							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>Print the finger tip and mold.<br/>
+								<a href="images/pad_casting/Printed parts.jpg" rel="facebox">
+									<img src="images/pad_casting/Printed parts.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).<br/>
+								<a href="images/pad_casting/Fingertip with string.jpg" rel="facebox">
+									<img src="images/pad_casting/Fingertip with string.jpg" width="256" />
+								</a>
+							</li>
+							<li>Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier&#39;s safety instructions while working with liquid silicone.<br/>
+								<a href="images/pad_casting/Pouring part A.jpg" rel="facebox">
+									<img src="images/pad_casting/Pouring part A.jpg" width="256" />
+								</a>
+							</li>
+							<li>Pour the liquid silicone to mostly fill the fingertip mold.<br/>
+								<a href="images/pad_casting/Poured into mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Poured into mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the printed fingertip piece into the filled mold.<br/>
+								<a href="images/pad_casting/Inserting phalange.jpg" rel="facebox">
+									<img src="images/pad_casting/Inserting phalange.jpg" width="256" />
+								</a>
+							</li>
+							<li>Remove any excess silicone. If necessary, use tape to hold the phalange in place.<br/>
+								<a href="images/pad_casting/Phalanges in mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Phalanges in mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.<br/>
+								<a href="images/pad_casting/Removing from mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Removing from mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.<br/>
+								<a href="images/pad_casting/Installing finger pad.jpg" rel="facebox">
+									<img src="images/pad_casting/Installing finger pad.jpg" width="256" />
+								</a>
+							</li>
+							<li>
+								If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+							</li>
+							<li>The fingertip pads are finished. Continue installing them onto the hand.<br/>
+								<a href="images/pad_casting/Assembled fingertip.jpg" rel="facebox">
+									<img src="images/pad_casting/Assembled fingertip.jpg" width="256" />
+								</a>
+							</li>
+					</ol>
+				</div>
+			</div>
+		
+			<div class="subassembly">
+				<h3>Assemble Grippy Finger Tip</h3>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
+								</td>
+							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>Print the finger tip and mold.<br/>
+								<a href="images/pad_casting/Printed parts.jpg" rel="facebox">
+									<img src="images/pad_casting/Printed parts.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).<br/>
+								<a href="images/pad_casting/Fingertip with string.jpg" rel="facebox">
+									<img src="images/pad_casting/Fingertip with string.jpg" width="256" />
+								</a>
+							</li>
+							<li>Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier&#39;s safety instructions while working with liquid silicone.<br/>
+								<a href="images/pad_casting/Pouring part A.jpg" rel="facebox">
+									<img src="images/pad_casting/Pouring part A.jpg" width="256" />
+								</a>
+							</li>
+							<li>Pour the liquid silicone to mostly fill the fingertip mold.<br/>
+								<a href="images/pad_casting/Poured into mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Poured into mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the printed fingertip piece into the filled mold.<br/>
+								<a href="images/pad_casting/Inserting phalange.jpg" rel="facebox">
+									<img src="images/pad_casting/Inserting phalange.jpg" width="256" />
+								</a>
+							</li>
+							<li>Remove any excess silicone. If necessary, use tape to hold the phalange in place.<br/>
+								<a href="images/pad_casting/Phalanges in mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Phalanges in mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.<br/>
+								<a href="images/pad_casting/Removing from mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Removing from mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.<br/>
+								<a href="images/pad_casting/Installing finger pad.jpg" rel="facebox">
+									<img src="images/pad_casting/Installing finger pad.jpg" width="256" />
+								</a>
+							</li>
+							<li>
+								If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+							</li>
+							<li>The fingertip pads are finished. Continue installing them onto the hand.<br/>
+								<a href="images/pad_casting/Assembled fingertip.jpg" rel="facebox">
+									<img src="images/pad_casting/Assembled fingertip.jpg" width="256" />
+								</a>
+							</li>
+					</ol>
+				</div>
+			</div>
 		
 			<div class="subassembly">
 				<h3>Assemble Configuration File</h3>
@@ -301,9 +588,70 @@
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_finger_tip" rel="facebox" >Finger Tip</a>
+									<a href="#thing_finger_tip_mold" rel="facebox" >Finger Tip Mold</a>
 								</td>
 							</tr>
+						</table>
+					
+					<p>Steps:</p>
+					<ol>
+							<li>Print the finger tip and mold.<br/>
+								<a href="images/pad_casting/Printed parts.jpg" rel="facebox">
+									<img src="images/pad_casting/Printed parts.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the string through the fingertip and tie off the end prior to molding (not shown in all photos here).<br/>
+								<a href="images/pad_casting/Fingertip with string.jpg" rel="facebox">
+									<img src="images/pad_casting/Fingertip with string.jpg" width="256" />
+								</a>
+							</li>
+							<li>Mix silicone according to the instructions from the supplier. Wear gloves and follow the supplier&#39;s safety instructions while working with liquid silicone.<br/>
+								<a href="images/pad_casting/Pouring part A.jpg" rel="facebox">
+									<img src="images/pad_casting/Pouring part A.jpg" width="256" />
+								</a>
+							</li>
+							<li>Pour the liquid silicone to mostly fill the fingertip mold.<br/>
+								<a href="images/pad_casting/Poured into mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Poured into mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>Insert the printed fingertip piece into the filled mold.<br/>
+								<a href="images/pad_casting/Inserting phalange.jpg" rel="facebox">
+									<img src="images/pad_casting/Inserting phalange.jpg" width="256" />
+								</a>
+							</li>
+							<li>Remove any excess silicone. If necessary, use tape to hold the phalange in place.<br/>
+								<a href="images/pad_casting/Phalanges in mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Phalanges in mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>When the silicone is cured, remove the fingertip and silicone pad from the mold. The pad may stay on the fingertip or it may need to be removed separately.<br/>
+								<a href="images/pad_casting/Removing from mold.jpg" rel="facebox">
+									<img src="images/pad_casting/Removing from mold.jpg" width="256" />
+								</a>
+							</li>
+							<li>If the pad came off the fingertip during demolding, it can be reattached by pushing it over the end of the fingertip.<br/>
+								<a href="images/pad_casting/Installing finger pad.jpg" rel="facebox">
+									<img src="images/pad_casting/Installing finger pad.jpg" width="256" />
+								</a>
+							</li>
+							<li>
+								If necessary, use an x-acto knife to trim off excess silicone so that the edges of the pad are flush with the edges of the fingertip.
+							</li>
+							<li>The fingertip pads are finished. Continue installing them onto the hand.<br/>
+								<a href="images/pad_casting/Assembled fingertip.jpg" rel="facebox">
+									<img src="images/pad_casting/Assembled fingertip.jpg" width="256" />
+								</a>
+							</li>
+					</ol>
+				</div>
+			</div>
+		
+			<div class="subassembly">
+				<h3>Assemble Grippy Finger Tip</h3>
+				<div class="stuff">
+						<p>Things needed:</p>
+						<table id="bomtable">
 							<tr>
 								<td class="right">
 									<strong>1 x</strong>
@@ -378,7 +726,23 @@
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_palm" rel="facebox" >Palm</a>
+									<a href="#thing_middle_finger_assembly" rel="facebox" >Assembled Middle Finger</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_pinky_finger_assembly" rel="facebox" >Assembled Pinky Finger</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_config_file" rel="facebox" >Configuration File</a>
 								</td>
 							</tr>
 							<tr>
@@ -394,15 +758,23 @@
 									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_config_file" rel="facebox" >Configuration File</a>
+									<a href="#thing_ring_finger_assembly" rel="facebox" >Assembled Ring Finger</a>
 								</td>
 							</tr>
 							<tr>
 								<td class="right">
-									<strong>4 x</strong>
+									<strong>1 x</strong>
 								</td>
 								<td>
-									<a href="#thing_finger_assembly" rel="facebox" >Assembled Finger</a>
+									<a href="#thing_palm" rel="facebox" >Palm</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="right">
+									<strong>1 x</strong>
+								</td>
+								<td>
+									<a href="#thing_index_finger_assembly" rel="facebox" >Assembled Index Finger</a>
 								</td>
 							</tr>
 						</table>
@@ -448,4 +820,4 @@
     </div>
   </body>
 </html>
-<!-- Generated on 2014/10/30 16:21:52 by ThingDoc -->
+<!-- Generated on 2014/12/20 22:11:11 by ThingDoc -->

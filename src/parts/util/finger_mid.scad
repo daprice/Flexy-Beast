@@ -1,4 +1,4 @@
-include <../config.scad>
+include <../../config.scad>
 use <finger_base.scad>
 
 rotate([0,-90,0]) fingermid();

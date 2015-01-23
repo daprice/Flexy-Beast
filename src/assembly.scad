@@ -1,9 +1,9 @@
 include <config.scad>
 
 use <parts/palm.scad>
-use <parts/finger_base.scad>
-use <parts/finger_mid.scad>
-use <parts/finger_tip.scad>
+use <parts/util/finger_base.scad>
+use <parts/util/finger_mid.scad>
+use <parts/util/finger_tip.scad>
 use <parts/finger_tip_mold.scad>
 use <parts/thumb_tip.scad>
 
@@ -18,7 +18,10 @@ handlayout();
  * @assembled
  * @using config_file
  * @using 1 palm
- * @using 4 finger_assembly
+ * @using 1 index_finger_assembly
+ * @using 1 middle_finger_assembly
+ * @using 1 ring_finger_assembly
+ * @using 1 pinky_finger_assembly
  * @using 1 thumb_assembly
  * @step Print the palm, thumb base, thumb tip, and four each of the finger base and tip. These can be scaled as needed in each dimension using the x-, y-, and zScaleFactor variables in the OpenSCAD code.
  * @step Insert a string through each fingertip (the hole may need to be drilled slightly to deburr) and tie it off on the end. [[hand_assembly/Fingertip with string.jpg]]
@@ -33,10 +36,10 @@ module handlayout(sp = 14)
 	cyborgbeastpalm();
 	translate([20.5*xScaleFactor,33*yScaleFactor,7*zScaleFactor]) rotate([0,180,0]) 
 		{
-		translate([0*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=0);		//	Index finger
-		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=7);	//	Middle finger
-		translate([sp*2*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=5);	//	Ring finger
-		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(length=-7.5);	//	Little finger
+		translate([0*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(lengthMult=indexProp*fingerLength);		//	Index finger
+		translate([sp*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(lengthMult=middleProp*fingerLength);	//	Middle finger
+		translate([sp*2*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(lengthMult=ringProp*fingerLength);	//	Ring finger
+		translate([sp*3*xScaleFactor,7.5*yScaleFactor,0]) fingerlayout(lengthMult=pinkyProp*fingerLength);	//	Little finger
 		}
 	translate([36*xScaleFactor,-15.5*yScaleFactor,0.5*zScaleFactor]) rotate([50,-20,90]) 
 		{
@@ -50,11 +53,11 @@ module handlayout(sp = 14)
 module fingerlayout(length=0)
 	{
 	//rotate([180,-15,90]) translate([44,-8,-5]) fingertip_solid(pad=fingerPads);
-	rotate([180,-10,90]) translate([15,-8,-10]) fingertip_curved_solid(pad=fingerPads);
-	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase();
+	rotate([180,-10,90]) translate([15*lengthMult,-8,-10]) fingertip_curved_solid(length = 17*lengthMult*fingerLength, pad=fingerPads);
+	rotate([180,-5,90]) translate([-20,-8,-12]) fingerbase(length=20*lengthMult*fingerLength);
 	}
 
 
 module thumbmid()
 	{
-	rotate([0,0,-90]) fingerbase(); }
+	rotate([0,0,-90]) fingerbase(length = 20 * thumbProp); }
