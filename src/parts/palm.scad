@@ -43,7 +43,7 @@ module cyborgbeastpalm()
 					}
 				}
 			//	Thumb connector
-			translate([40,-13,6.5]) {
+			*translate([40,-13,6.5]) {
 				//channel for string to thumb
 				translate([0,5.5,-5]) rotate([0,90,40]) translate([0,0,-7.5]) cylinder(r=1.25*(1/yScaleFactor), h=5, $fn=fn/2);
 				//thumb cutout
@@ -152,7 +152,7 @@ module hardwarecutouts()
 				cylinder(r=1, h=100, center=true, $fn=fn/4);
 			for(i=[-3,-1,1,3]) translate([i*2*xScaleFactor,0,(pow(i,2)*-0.05)*zScaleFactor  ]) rotate([90,0,i*-2]) 
 				cylinder(r=1, h=100, center=true, $fn=fn/4);
-			translate([5*2*xScaleFactor,0,(pow(5,2)*-0.05)*zScaleFactor  ]) rotate([90,0,5*-2]) 
+		*	translate([5*2*xScaleFactor,0,(pow(5,2)*-0.05)*zScaleFactor  ]) rotate([90,0,5*-2]) 
 				union() translate([0,0,10*zScaleFactor]) {
 				cylinder(r=1, h=100, center=false, $fn=fn/4);
 				rotate([0,120,-15]) cylinder(r=1, h=100, center=false, $fn=fn/4);
@@ -160,7 +160,7 @@ module hardwarecutouts()
 				}
 			}
 	//	Holes for thumb knuckle - used to hold the stretchy joint in Flexy Beast
-		translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
+		*translate([40*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) {
 			rotate([-70,20,0]) translate([-4.75,-0.5*yScaleFactor,0.7]) {
 				cylinder(d=7, h=knuckleW*yScaleFactor + knucklePadding*yScaleFactor, center=true, $fn=fn/2);
 				translate([25,0,0]) cube([50,jointThick,knuckleW*yScaleFactor + knucklePadding*yScaleFactor], center=true);
@@ -169,11 +169,11 @@ module hardwarecutouts()
 	//	Elastic return cutout - not needed in Flexy Beast
 	//	translate([31,-13,16]) rotate([-72,0,0]) cylinder(r=3/2, h=40, center=true, $fn=fn/2);
 	//	Thumb tendon channel
-		translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
+		*translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
 			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,-4.5*xScaleFactor]) 
 				cylinder(r=1, h=100, center=false, $fn=fn/2);
 	//	Thumb tendon channel
-		translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
+		*translate([33*xScaleFactor,-13*yScaleFactor,5*zScaleFactor]) rotate([90-72,-90,-30]) 
 			rotate([0,-20,-0]) rotate([10,90,0]) translate([0,0,5*zScaleFactor]) 
 				cylinder(r1=1, r2=20, h=100, center=false, $fn=fn/2);
 		
@@ -193,7 +193,7 @@ module knuckleblock(width=4.8)
 module cyborgbeast07palm()
 	{
 	//	Thumb!!!
-	translate([40,-13,5]) rotate([-72,0,0]) cyborgthumbsolid();
+	*translate([40,-13,5]) rotate([-72,0,0]) cyborgthumbsolid();
 	//	Knuckle Block
 	for(i=[-3,-1,1,3]) translate([i*7,23.9,4+4]) knuckleblock(width=knuckleW/2);
 
