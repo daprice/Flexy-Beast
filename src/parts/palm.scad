@@ -141,7 +141,7 @@ module hardwarecutouts()
 				translate([0,25,0]) cube([knuckleW*xScaleFactor + knucklePadding*yScaleFactor,50,jointThick], center=true);
 			}
 	//	Wrist hinges
-		translate([0,-28*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=7/2, h=100, center=true, $fn=fn/2);
+		translate([0,-28*yScaleFactor,5.5*zScaleFactor]) rotate([0,90,0]) cylinder(r=7.7/2, h=100, center=true, $fn=fn/2);
 	//	Holes for tying the elastic cord at knuckles - not needed in Flexy Beast
 	//	for (i=[-1,1]) translate([7.3*2*i,22,0]) for(i=[-1,1]) translate([2*i,0,0])
 	//		cylinder(r=1.25, h=100, center=true, $fn=fn/4);
